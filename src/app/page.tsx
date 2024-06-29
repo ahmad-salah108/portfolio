@@ -1,10 +1,13 @@
 import Hero from "@/sections/hero/Hero";
+import Skills from "@/sections/skills/Skills";
+import { Container } from "@mui/material";
 
 
 export default function Home() {
   return (
-    <div>
+    <Container maxWidth="lg">
       <Hero/>
-    </div>
+      <Skills/>
+    </Container>
   );
 }

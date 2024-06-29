@@ -15,7 +15,7 @@ export default function NavLink(props: NavLinkProps) {
     <Link
       {...props}
       className={clsx(
-        "gold-text-hover text-bold-600",
+        "gold-text-hover text-bold-500",
         props.disableUnderlined || "underlined-glow",
         pathname === props.href && "active text-gold"
       )}

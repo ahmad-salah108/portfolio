@@ -1,0 +1,47 @@
+:root {
+  --gold: 234, 179, 8; /* #ffc107 */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+**
+SCROLLBAR
+**
+*/
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+::-webkit-scrollbar-track {
+  background: #111; 
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2c2c2c; 
+} 

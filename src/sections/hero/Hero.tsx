@@ -1,30 +1,97 @@
 "use client";
 
-import { Box, Container, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid,
+  IconButton,
+  Stack,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import Link from "next/link";
 
 export default function Hero() {
+  const theme = useTheme();
+  const downSm = useMediaQuery(theme.breakpoints.down('sm'));
+  const primary = theme.palette.primary.main;
+
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          width: "100%",
-          minHeight: "calc(100vh - 112px)",
-          display: "flex",
-          alignItems: "center",
-        }}
+    <Box className="section center-vertically">
+      <Grid
+        container
+        sx={{ width: "100%", justifyContent: "space-between", rowGap: "40px" }}
       >
-        <Stack
-          direction={"row"}
+        <Grid
+          item
+          xs={12}
+          lg={5}
           sx={{
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            rowGap: "50px",
-            width: "100%",
+            order: { lg: 2 },
+            display: "flex",
+            alignItems: "center",
+            justifyContent: { xs: "center", lg: "end" },
+            marginInline: { xs: "auto", lg: "0" },
           }}
         >
-          <Box sx={{width: '50%'}}>
+          <Box
+            sx={{
+              // borderRadius: "50%",
+              width: "fit-content",
+              // height: "400px",
+              overflow: "hidden",
+              // boxShadow: `0 0 25px ${primary}`,
+              // backgroundColor: primary,
+              display: "grid",
+              placeItems: "center",
+              cursor: "pointer",
+              transition: "all 0.4s",
+              // "&:hover": {
+              //   boxShadow: `0 0 25px ${primary}, 0 0 50px ${primary}`,
+              // },
+            }}
+          >
+            {downSm ? (
+              <Image
+                src={'/ahmadsalah.webp'}
+                alt="Ahmad Salah's Photo"
+                width={300}
+                height={300}
+                quality={100}
+                priority
+              />
+            ) : (
+              <Image
+                src={'/ahmadsalah.webp'}
+                alt="Ahmad Salah's Photo"
+                width={400}
+                height={400}
+                quality={100}
+                priority
+              />
+            )}
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          lg={5}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: { xs: "center", lg: "start" },
+            maxWidth: { xs: "640px", lg: "auto" },
+            marginInline: { xs: "auto", lg: "0" },
+          }}
+        >
+          <Box>
             <Typography
               variant="h2"
               sx={{ "&, & span": { fontWeight: "700" } }}
@@ -44,43 +111,58 @@ export default function Hero() {
                 Front-End Developer
               </Typography>
             </Typography>
-            <Typography sx={{lineHeight: '1.7rem'}}>
+            <Typography mb={1} sx={{ lineHeight: "1.8rem" }}>
               Resourceful professional with successful track record in
               developing innovative web designs and features. Possesses solid
               knowledge of ReactJS, Typescript and NextJS with ability to
               quickly learn new technologies. Demonstrated success in
               identifying and resolving complex code issues.
             </Typography>
+            <Stack mb={2} direction={"row"}>
+              <Link
+                href="https://www.linkedin.com/in/ahmad-salah-1b750b223/"
+                target="_blank"
+                tabIndex={-1} // Cancels tab select (focus-visible)
+              >
+                <IconButton color="primary">
+                  <LinkedInIcon />
+                </IconButton>
+              </Link>
+              <Link
+                href="https://github.com/ahmad-salah108/"
+                target="_blank"
+                tabIndex={-1} // Cancels tab select (focus-visible)
+              >
+                <IconButton color="primary">
+                  <GitHubIcon />
+                </IconButton>
+              </Link>
+              <Link
+                href="https://wa.me/+972592433871"
+                target="_blank"
+                tabIndex={-1} // Cancels tab select (focus-visible)
+              >
+                <IconButton color="primary">
+                  <WhatsAppIcon />
+                </IconButton>
+              </Link>
+              <Link
+                href="https://www.instagram.com/ahmad_salah108/"
+                target="_blank"
+                tabIndex={-1} // Cancels tab select (focus-visible)
+              >
+                <IconButton color="primary">
+                  <InstagramIcon />
+                </IconButton>
+              </Link>
+            </Stack>
+            <Stack direction={"row"} sx={{ gap: "1rem" }}>
+              <Button variant="contained">Hire</Button>
+              <Button variant="outlined">Contact</Button>
+            </Stack>
           </Box>
-          <Box
-            sx={{
-              borderRadius: "50%",
-              overflow: "hidden",
-              width: "270px",
-              height: "270px",
-              boxShadow: (theme) =>
-                `0 0 10px 4px ${theme.palette.primary.main}`,
-              backgroundColor: (theme) => theme.palette.primary.main,
-              display: "grid",
-              placeItems: "center",
-              cursor: "pointer",
-              transition: "all 0.4s",
-              "&:hover": {
-                boxShadow: (theme) =>
-                  `0 0 50px 4px ${theme.palette.primary.main}, 0 0 15px 0 ${theme.palette.primary.main}, 0 0 15px 0 ${theme.palette.primary.main}`,
-              },
-            }}
-          >
-            <Image
-              src={"/ahmad-salah.png"}
-              alt="Ahmad Salah Picture"
-              width={270}
-              height={270}
-              priority
-            />
-          </Box>
-        </Stack>
-      </Box>
-    </Container>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }

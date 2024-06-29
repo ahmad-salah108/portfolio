@@ -39,7 +39,6 @@ export default function DrawerAppBar() {
         display: { xs: "block", sm: "none" },
         "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
         backdropFilter: "blur(10px)",
-        backgroundColor: "transparent",
       }}
     >
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -69,14 +68,14 @@ export default function DrawerAppBar() {
           <NavLink href={"/"} disableUnderlined>
             <ListItem disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={'Home'} />
+                <ListItemText primary={"Home"} />
               </ListItemButton>
             </ListItem>
           </NavLink>
           <NavLink href={"/about"} disableUnderlined>
             <ListItem disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={'About'} />
+                <ListItemText primary={"About"} />
               </ListItemButton>
             </ListItem>
           </NavLink>
@@ -90,7 +89,12 @@ export default function DrawerAppBar() {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ backdropFilter: "blur(10px)", backgroundColor: 'transparent', borderBottom: theme => `1px solid ${alpha(theme.palette.white.main, 0.17)}` }}
+        sx={{
+          backdropFilter: "blur(10px)",
+          backgroundColor: theme => alpha(theme.palette.black.main, 0.5),
+          borderBottom: (theme) =>
+            `1px solid ${alpha(theme.palette.white.main, 0.17)}`,
+        }}
       >
         <Container maxWidth="lg">
           <Toolbar>
@@ -112,8 +116,7 @@ export default function DrawerAppBar() {
                   letterSpacing: "2px",
                 },
                 flexGrow: 1,
-                textAlign: {xs: 'end', sm: 'start'}
-                // display: { xs: "none", sm: "block" },
+                textAlign: { xs: "end", sm: "start" },
               }}
             >
               Ahmad{" "}
