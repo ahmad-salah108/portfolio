@@ -21,7 +21,6 @@ import Link from "next/link";
 export default function Hero() {
   const theme = useTheme();
   const downSm = useMediaQuery(theme.breakpoints.down('sm'));
-  const primary = theme.palette.primary.main;
 
   return (
     <Box className="section center-vertically">
@@ -43,19 +42,12 @@ export default function Hero() {
         >
           <Box
             sx={{
-              // borderRadius: "50%",
               width: "fit-content",
-              // height: "400px",
               overflow: "hidden",
-              // boxShadow: `0 0 25px ${primary}`,
-              // backgroundColor: primary,
               display: "grid",
               placeItems: "center",
               cursor: "pointer",
               transition: "all 0.4s",
-              // "&:hover": {
-              //   boxShadow: `0 0 25px ${primary}, 0 0 50px ${primary}`,
-              // },
             }}
           >
             {downSm ? (
