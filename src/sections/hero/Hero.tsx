@@ -53,7 +53,7 @@ export default function Hero() {
             {downSm ? (
               <Image
                 src={'/ahmadsalah.webp'}
-                alt="Ahmad Salah's Photo"
+                alt="Ahmad Salah Photo"
                 width={300}
                 height={300}
                 quality={100}
@@ -62,7 +62,7 @@ export default function Hero() {
             ) : (
               <Image
                 src={'/ahmadsalah.webp'}
-                alt="Ahmad Salah's Photo"
+                alt="Ahmad Salah Photo"
                 width={400}
                 height={400}
                 quality={100}
