@@ -52,7 +52,7 @@ export default function Hero() {
           >
             {downSm ? (
               <Image
-                src={'/ahmadsalah.webp'}
+                src={`/ahmadsalah.webp`}
                 alt="Ahmad Salah Photo"
                 width={300}
                 height={300}
@@ -61,7 +61,7 @@ export default function Hero() {
               />
             ) : (
               <Image
-                src={'/ahmadsalah.webp'}
+                src={`/ahmadsalah.webp`}
                 alt="Ahmad Salah Photo"
                 width={400}
                 height={400}
@@ -88,7 +88,7 @@ export default function Hero() {
               variant="h2"
               sx={{ "&, & span": { fontWeight: "700" } }}
             >
-              Hi, it's{" "}
+              {`Hi, it's `}
               <Typography variant="h2" component={"span"} color="primary">
                 Ahmad
               </Typography>
@@ -98,7 +98,7 @@ export default function Hero() {
               sx={{ "&, & span": { fontWeight: "700" } }}
               mb={2}
             >
-              I'm a{" "}
+              {`I'm a `}
               <Typography variant="h5" component={"span"} color="primary">
                 Front-End Developer
               </Typography>
