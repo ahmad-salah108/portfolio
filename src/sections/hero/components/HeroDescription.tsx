@@ -9,22 +9,27 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 type SocialsType = {
   icon: React.ReactNode;
   url: string;
+  title: string;
 };
 
 const socials: SocialsType[] = [
   {
+    title: 'LinkedIn',
     icon: <LinkedInIcon />,
     url: "https://www.linkedin.com/in/ahmad-salah-1b750b223/",
   },
   {
+    title: 'GitHub',
     icon: <GitHubIcon />,
     url: "https://github.com/ahmad-salah108/",
   },
   {
+    title: 'WhatsApp',
     icon: <WhatsAppIcon />,
     url: "https://wa.me/+972592433871",
   },
   {
+    title: 'Instagram',
     icon: <InstagramIcon />,
     url: "https://www.instagram.com/ahmad_salah108/",
   },
@@ -62,6 +67,7 @@ export default function HeroDescription() {
             key={s.url}
             href={s.url}
             target="_blank"
+            title={s.title}
             tabIndex={-1} // Cancels tab select (focus-visible)
           >
             <IconButton color="primary">{s.icon}</IconButton>

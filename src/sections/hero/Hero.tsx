@@ -5,7 +5,7 @@ import HeroDescription from "./components/HeroDescription";
 
 export default function Hero() {
   return (
-    <Box className="section center-vertically">
+    <Box className="section">
       <Grid
         container
         sx={{ width: "100%", justifyContent: "space-between", rowGap: "40px" }}

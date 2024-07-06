@@ -11,9 +11,6 @@ export default function HeroImage() {
     <Box
       sx={{
         width: "fit-content",
-        overflow: "hidden",
-        cursor: "pointer",
-        transition: "all 0.4s",
       }}
       className="center"
     >
