@@ -5,7 +5,7 @@ import { SkillCardType } from "../Skills";
 
 export default function SkillCard(props: SkillCardType) {
   return (
-    <div className="box">
+    <div className="box" style={{marginInline: 'auto'}}>
       <div className="hover-point"></div>
       <div className="hover-point"></div>
       <div className="hover-point"></div>

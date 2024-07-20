@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Facebook, Mail, MailOutline } from "@mui/icons-material";
 
 type SocialsType = {
   icon: React.ReactNode;
@@ -32,6 +33,16 @@ const socials: SocialsType[] = [
     title: 'Instagram',
     icon: <InstagramIcon />,
     url: "https://www.instagram.com/ahmad_salah108/",
+  },
+  {
+    title: 'Facebook',
+    icon: <Facebook />,
+    url: "https://www.facebook.com/mr2jack",
+  },
+  {
+    title: 'Email',
+    icon: <MailOutline />,
+    url: "mailto:ahmad.work108@gmail.com",
   },
 ];
 

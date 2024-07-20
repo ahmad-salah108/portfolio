@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import SkillCard from "./components/SkillCard";
 
@@ -83,7 +83,7 @@ const skills: SkillCardType[] = [
 
 export default function Skills() {
   return (
-    <Box className="section">
+    <Box id='skills' className="section py-100">
       <Stack sx={{width: '100%', gap: '7rem'}}>
         <Typography
           variant="h2"
@@ -92,13 +92,17 @@ export default function Skills() {
         >
           Skills
         </Typography>
-        <Stack direction={'row'} sx={{width: '100%', columnGap: '100px', rowGap: '50px', flexWrap: 'wrap'}}>
+        {/* <Stack direction={'row'} sx={{width: '100%', columnGap: '100px', rowGap: '50px', flexWrap: 'wrap'}}> */}
+        <Grid container sx={{rowGap: '30px'}}>
           {
             skills.map(s => (
-              <SkillCard title={s.title} src={s.src} alt={s.alt}/>
+              <Grid key={s.title} item xs={12} sm={4} md={3} lg={2.4} >
+                <SkillCard title={s.title} src={s.src} alt={s.alt}/>
+              </Grid>
             ))
           }
-        </Stack>
+          </Grid>
+        {/* </Stack> */}
       </Stack>
     </Box>
   );

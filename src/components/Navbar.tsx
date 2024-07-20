@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -14,14 +14,13 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import { Container, Stack, alpha } from "@mui/material";
 import NavLink from "./NavLink";
 
 const drawerWidth = 240;
 
 export default function DrawerAppBar() {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -65,14 +64,14 @@ export default function DrawerAppBar() {
         </Typography>
         <Divider />
         <List>
-          <NavLink href={"/"} disableUnderlined>
+          <NavLink href={"/"} disableunderlined="true">
             <ListItem disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={"Home"} />
               </ListItemButton>
             </ListItem>
           </NavLink>
-          <NavLink href={"/about"} disableUnderlined>
+          <NavLink href={"/about"} disableunderlined="true">
             <ListItem disablePadding>
               <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={"About"} />
@@ -91,7 +90,7 @@ export default function DrawerAppBar() {
         component="nav"
         sx={{
           backdropFilter: "blur(10px)",
-          backgroundColor: theme => alpha(theme.palette.black.main, 0.5),
+          backgroundColor: (theme) => alpha(theme.palette.black.main, 0.5),
           borderBottom: (theme) =>
             `1px solid ${alpha(theme.palette.white.main, 0.17)}`,
         }}
@@ -130,10 +129,11 @@ export default function DrawerAppBar() {
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <Stack direction={"row"} spacing={3}>
-                <NavLink href={"/"}>Home</NavLink>
-                <NavLink href={"/about"}>About</NavLink>
-                <NavLink href={"/products"}>Products</NavLink>
-                <NavLink href={"/contact"}>Contact</NavLink>
+                <NavLink href={"/#"}>Home</NavLink>
+                <NavLink href={"/#skills"}>Skills</NavLink>
+                <NavLink href={"/#about"}>About</NavLink>
+                <NavLink href={"/#products"}>Products</NavLink>
+                <NavLink href={"/#contact"}>Contact</NavLink>
               </Stack>
             </Box>
           </Toolbar>
