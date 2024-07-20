@@ -15,32 +15,32 @@ type SocialsType = {
 
 const socials: SocialsType[] = [
   {
-    title: 'LinkedIn',
+    title: "LinkedIn",
     icon: <LinkedInIcon />,
     url: "https://www.linkedin.com/in/ahmad-salah-1b750b223/",
   },
   {
-    title: 'GitHub',
+    title: "GitHub",
     icon: <GitHubIcon />,
     url: "https://github.com/ahmad-salah108/",
   },
   {
-    title: 'WhatsApp',
+    title: "WhatsApp",
     icon: <WhatsAppIcon />,
     url: "https://wa.me/+972592433871",
   },
   {
-    title: 'Instagram',
+    title: "Instagram",
     icon: <InstagramIcon />,
     url: "https://www.instagram.com/ahmad_salah108/",
   },
   {
-    title: 'Facebook',
+    title: "Facebook",
     icon: <Facebook />,
     url: "https://www.facebook.com/mr2jack",
   },
   {
-    title: 'Email',
+    title: "Email",
     icon: <MailOutline />,
     url: "mailto:ahmad.work108@gmail.com",
   },
