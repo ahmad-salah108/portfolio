@@ -1,0 +1,72 @@
+[
+  {
+    "title": "HTML5",
+    "src": "/icons/html-icon.svg",
+    "alt": "HTML5 Icon"
+  },
+  {
+    "title": "CSS3",
+    "src": "/icons/css-icon.svg",
+    "alt": "CSS3 Icon"
+  },
+  {
+    "title": "JavaScript",
+    "src": "/icons/javascript-icon.svg",
+    "alt": "JavaScript Icon"
+  },
+  {
+    "title": "React",
+    "src": "/icons/react-icon.svg",
+    "alt": "React Icon"
+  },
+  {
+    "title": "Redux Toolkit",
+    "src": "/icons/redux-icon.svg",
+    "alt": "Redux Toolkit Icon"
+  },
+  {
+    "title": "Next",
+    "src": "/icons/next-icon.svg",
+    "alt": "Next Icon"
+  },
+  {
+    "title": "Typescript",
+    "src": "/icons/typescript-icon.svg",
+    "alt": "Typescript Icon"
+  },
+  {
+    "title": "Material UI",
+    "src": "/icons/mui-icon.svg",
+    "alt": "Material UI Icon"
+  },
+  {
+    "title": "Tailwind CSS",
+    "src": "/icons/tailwind-icon.svg",
+    "alt": "Tailwind CSS Icon"
+  },
+  {
+    "title": "Bootstrap5",
+    "src": "/icons/bootstrap-icon.svg",
+    "alt": "Bootstrap5 Icon"
+  },
+  {
+    "title": "jQuery",
+    "src": "/icons/jquery-icon.svg",
+    "alt": "jQuery Icon"
+  },
+  {
+    "title": "Sass",
+    "src": "/icons/sass-icon.svg",
+    "alt": "Sass Icon"
+  },
+  {
+    "title": "Git",
+    "src": "/icons/git-icon.svg",
+    "alt": "Git Icon"
+  },
+  {
+    "title": "GitHub",
+    "src": "/icons/github-icon.svg",
+    "alt": "GitHub Icon"
+  }
+]

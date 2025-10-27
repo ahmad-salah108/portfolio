@@ -1,5 +1,5 @@
 .text-gold{
-  color: rgb(var(--gold))
+  color: rgb(var(--gold)) !important
 }
 
 .text-bold-500{
@@ -19,10 +19,10 @@
 .underlined-glow::after{
   content: '';
   width: 100%;
-  height: 2px;
+  height: 3px;
   border-radius: 100vh;
   position: absolute;
-  bottom: -3px;
+  bottom: -7px;
   left: 0;
   background-color: rgb(var(--gold));
   box-shadow: rgb(var(--gold)) 0px -2px 7px, rgb(var(--gold), 0.4) 0px -2px 7px;
@@ -38,7 +38,7 @@
 
 .gold-text-hover:hover,
 .gold-text-hover:focus-visible{
-  color: rgb(var(--gold));
+  color: rgb(var(--gold)) !important;
 }
 
 .MuiPaper-root.MuiPaper-elevation{

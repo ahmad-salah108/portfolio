@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -15,7 +15,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Container, Stack, alpha } from "@mui/material";
-import NavLink from "./NavLink";
+import { useHash } from "@/hooks/useHash";
+import { scrollToSection } from "@/utils";
+import ButtonNav from "./ButtonNav";
 
 const drawerWidth = 240;
 
@@ -25,6 +27,11 @@ export default function DrawerAppBar() {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+  const hash = useHash();
+  useEffect(() => {
+    const section = hash.replace("#", "");
+    if (section) scrollToSection(section);
+  }, [hash]);
 
   const drawer = (
     <Drawer
@@ -37,7 +44,7 @@ export default function DrawerAppBar() {
       sx={{
         display: { xs: "block", sm: "none" },
         "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
-        backdropFilter: "blur(10px)",
+        backdropFilter: "blur(20px)",
       }}
     >
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -64,20 +71,66 @@ export default function DrawerAppBar() {
         </Typography>
         <Divider />
         <List>
-          <NavLink href={"/"} disableunderlined="true">
-            <ListItem disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={"Home"} />
-              </ListItemButton>
-            </ListItem>
-          </NavLink>
-          <NavLink href={"/about"} disableunderlined="true">
-            <ListItem disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={"About"} />
-              </ListItemButton>
-            </ListItem>
-          </NavLink>
+          <ButtonNav
+            disableUnderlined={true}
+            section=""
+            content={
+              <ListItem disablePadding>
+                <ListItemButton sx={{ textAlign: "center" }}>
+                  <ListItemText primary={"Home"} />
+                </ListItemButton>
+              </ListItem>
+            }
+            hash={hash}
+          />
+          <ButtonNav
+            disableUnderlined={true}
+            section="skills"
+            content={
+              <ListItem disablePadding>
+                <ListItemButton sx={{ textAlign: "center" }}>
+                  <ListItemText primary={"Skills"} />
+                </ListItemButton>
+              </ListItem>
+            }
+            hash={hash}
+          />
+          <ButtonNav
+            disableUnderlined={true}
+            section="about"
+            content={
+              <ListItem disablePadding>
+                <ListItemButton sx={{ textAlign: "center" }}>
+                  <ListItemText primary={"About"} />
+                </ListItemButton>
+              </ListItem>
+            }
+            hash={hash}
+          />
+          <ButtonNav
+            disableUnderlined={true}
+            section="product"
+            content={
+              <ListItem disablePadding>
+                <ListItemButton sx={{ textAlign: "center" }}>
+                  <ListItemText primary={"Product"} />
+                </ListItemButton>
+              </ListItem>
+            }
+            hash={hash}
+          />
+          <ButtonNav
+            disableUnderlined={true}
+            section="contact"
+            content={
+              <ListItem disablePadding>
+                <ListItemButton sx={{ textAlign: "center" }}>
+                  <ListItemText primary={"Contact"} />
+                </ListItemButton>
+              </ListItem>
+            }
+            hash={hash}
+          />
         </List>
       </Box>
     </Drawer>
@@ -89,7 +142,7 @@ export default function DrawerAppBar() {
       <AppBar
         component="nav"
         sx={{
-          backdropFilter: "blur(10px)",
+          backdropFilter: "blur(20px)",
           backgroundColor: (theme) => alpha(theme.palette.black.main, 0.5),
           borderBottom: (theme) =>
             `1px solid ${alpha(theme.palette.white.main, 0.17)}`,
@@ -129,11 +182,11 @@ export default function DrawerAppBar() {
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <Stack direction={"row"} spacing={3}>
-                <NavLink href={"/#"}>Home</NavLink>
-                <NavLink href={"/#skills"}>Skills</NavLink>
-                <NavLink href={"/#about"}>About</NavLink>
-                <NavLink href={"/#products"}>Products</NavLink>
-                <NavLink href={"/#contact"}>Contact</NavLink>
+                <ButtonNav section="" content="Home" hash={hash} />
+                <ButtonNav section="skills" content="Skills" hash={hash} />
+                <ButtonNav section="about" content="About" hash={hash} />
+                <ButtonNav section="products" content="Prdoucts" hash={hash} />
+                <ButtonNav section="contact" content="Contact" hash={hash} />
               </Stack>
             </Box>
           </Toolbar>

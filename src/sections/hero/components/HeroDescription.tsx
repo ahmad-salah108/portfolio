@@ -6,12 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Facebook, Mail, MailOutline } from "@mui/icons-material";
-
-type SocialsType = {
-  icon: React.ReactNode;
-  url: string;
-  title: string;
-};
+import { SocialsType } from "@/types";
 
 const socials: SocialsType[] = [
   {
