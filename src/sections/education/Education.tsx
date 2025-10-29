@@ -63,13 +63,12 @@ function Education() {
               borderRadius: "10px",
               transition: "all 0.3s",
               cursor: "pointer",
+              border: '3px solid #eab308ff',
               boxShadow: (theme) =>
-                `0 0 15px ${theme.palette.primary.main},
-                0 0 3px 1px ${theme.palette.primary.main}`,
+                `0 0 25px -5px ${theme.palette.primary.main}`,
               "&:hover": {
                 boxShadow: (theme) =>
-                  `0 0 25px ${theme.palette.primary.main},
-                0 0 3px 1px ${theme.palette.primary.main}`,
+                  `0 0 25px ${theme.palette.primary.main}`,
                 transform: {
                   xs: "scale(1.02) translateX(-50%)",
                   md: "scale(1.02) translateX(0)"
@@ -126,15 +125,14 @@ function Education() {
               borderRadius: "10px",
               transition: "all 0.3s",
               cursor: "pointer",
+              border: '3px solid #eab308ff',
               boxShadow: (theme) =>
-                `0 0 15px ${theme.palette.primary.main},
-                0 0 3px 1px ${theme.palette.primary.main}`,
+                `0 0 25px -5px ${theme.palette.primary.main}`,
               "&:hover": {
                 boxShadow: (theme) =>
-                  `0 0 25px ${theme.palette.primary.main},
-                0 0 3px 1px ${theme.palette.primary.main}`,
+                  `0 0 25px ${theme.palette.primary.main}`,
                 transform: {
-                  xs: "scale(1.02) translateX(50%)",
+                  xs: "scale(1.02) translateX(-50%)",
                   md: "scale(1.02) translateX(0)"
                 },
               },
