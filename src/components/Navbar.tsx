@@ -106,11 +106,11 @@ export default function Navbar() {
           />
           <ButtonNav
             disableUnderlined={true}
-            section="product"
+            section="projects"
             content={
               <ListItem disablePadding>
                 <ListItemButton sx={{ textAlign: "center" }}>
-                  <ListItemText primary={"Product"} />
+                  <ListItemText primary={"Projects"} />
                 </ListItemButton>
               </ListItem>
             }
@@ -180,7 +180,7 @@ export default function Navbar() {
                 <ButtonNav section="" content="Home" />
                 <ButtonNav section="skills" content="Skills"/>
                 <ButtonNav section="education" content="Education" />
-                <ButtonNav section="products" content="Prdoucts" />
+                <ButtonNav section="projects" content="Projects" />
                 <ButtonNav section="contact" content="Contact" />
               </Stack>
             </Box>
