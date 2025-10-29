@@ -1,11 +1,11 @@
 import { SkillCardType } from "@/types";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
 export default function SkillCard(props: SkillCardType) {
   return (
-    <div className="box" style={{marginInline: 'auto'}}>
+    <Box className="box" sx={{marginInline: 'auto'}}>
       <div className="hover-point"></div>
       <div className="hover-point"></div>
       <div className="hover-point"></div>
@@ -18,6 +18,6 @@ export default function SkillCard(props: SkillCardType) {
         <Image src={props.src} alt={props.alt} width={40} height={40}/>
         <code style={{fontSize: '0.9rem'}}>{props.title}</code>
       </Stack>
-    </div>
+    </Box>
   );
 }

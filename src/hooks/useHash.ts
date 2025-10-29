@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 
 export const useHash = () => {
-  const [hash, setHash] = useState<string>(window.location.hash);
+  const [hash, setHash] = useState<string>('');
   useEffect(() => {
+    setHash(window.location.hash);
     const onHashChange = () => {
       setHash(window.location.hash);
     };

@@ -1,9 +1,14 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+"use client";
+
+import { useSectionsObserver } from "@/context/SectionsObserverContext";
+import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 
 function Education() {
+  const { educationRef } = useSectionsObserver();
+
   return (
-    <Box id="education" className="section py-100">
+    <Box id="education" className="section my-100" ref={educationRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"

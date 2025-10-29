@@ -7,7 +7,7 @@ import theme from "@/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { open_sans } from "@/fonts";
-
+import { SectionsObserverProvider } from "@/context/SectionsObserverContext";
 
 export const metadata: Metadata = {
   title: "Ahmad Salah",
@@ -22,13 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={open_sans.className}>
-        <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Navbar />
-            {children}
-          </ThemeProvider>
-        </AppRouterCacheProvider>
+        <SectionsObserverProvider>
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <Navbar />
+              {children}
+            </ThemeProvider>
+          </AppRouterCacheProvider>
+        </SectionsObserverProvider>
       </body>
     </html>
   );

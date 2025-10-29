@@ -1,5 +1,5 @@
 :root {
-  --gold: 234, 179, 8; /* #ffc107 */
+  --main: 234, 179, 8;
   --white: 255, 255, 255;
   --paper: 18, 18, 18;
   scroll-behavior: smooth;

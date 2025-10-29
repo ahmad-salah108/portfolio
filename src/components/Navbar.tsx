@@ -21,7 +21,7 @@ import ButtonNav from "./ButtonNav";
 
 const drawerWidth = 240;
 
-export default function DrawerAppBar() {
+export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -81,7 +81,6 @@ export default function DrawerAppBar() {
                 </ListItemButton>
               </ListItem>
             }
-            hash={hash}
           />
           <ButtonNav
             disableUnderlined={true}
@@ -93,7 +92,6 @@ export default function DrawerAppBar() {
                 </ListItemButton>
               </ListItem>
             }
-            hash={hash}
           />
           <ButtonNav
             disableUnderlined={true}
@@ -105,7 +103,6 @@ export default function DrawerAppBar() {
                 </ListItemButton>
               </ListItem>
             }
-            hash={hash}
           />
           <ButtonNav
             disableUnderlined={true}
@@ -117,7 +114,6 @@ export default function DrawerAppBar() {
                 </ListItemButton>
               </ListItem>
             }
-            hash={hash}
           />
           <ButtonNav
             disableUnderlined={true}
@@ -129,7 +125,6 @@ export default function DrawerAppBar() {
                 </ListItemButton>
               </ListItem>
             }
-            hash={hash}
           />
         </List>
       </Box>
@@ -182,11 +177,11 @@ export default function DrawerAppBar() {
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <Stack direction={"row"} spacing={3}>
-                <ButtonNav section="" content="Home" hash={hash} />
-                <ButtonNav section="skills" content="Skills" hash={hash} />
-                <ButtonNav section="about" content="About" hash={hash} />
-                <ButtonNav section="products" content="Prdoucts" hash={hash} />
-                <ButtonNav section="contact" content="Contact" hash={hash} />
+                <ButtonNav section="" content="Home" />
+                <ButtonNav section="skills" content="Skills"/>
+                <ButtonNav section="education" content="Education" />
+                <ButtonNav section="products" content="Prdoucts" />
+                <ButtonNav section="contact" content="Contact" />
               </Stack>
             </Box>
           </Toolbar>

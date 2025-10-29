@@ -5,6 +5,6 @@ export const scrollToSection = (id: string) => {
       block: "start",
       behavior: "smooth",
     });
-    window.location.hash = `#${id}`;
+    window.location.hash = id ? `#${id}` : '#';
   }
 };
