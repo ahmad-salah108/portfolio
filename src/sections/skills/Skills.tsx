@@ -20,7 +20,7 @@ export default function Skills() {
           className="section-heading text-gold"
           sx={{
             fontWeight: "500",
-            letterSpacing: "1rem",
+            letterSpacing: "0.3rem",
             textAlign: "center",
             marginInline: "auto",
           }}
@@ -29,7 +29,7 @@ export default function Skills() {
         </Typography>
         <Grid container sx={{ rowGap: "30px" }}>
           {skills.map((s) => (
-            <Grid key={s.title} item xs={12} sm={4} md={3} lg={2.4}>
+            <Grid key={s.title} size={{xs: 12, sm: 4, md: 3, lg: 2.4}}>
               <SkillCard title={s.title} src={s.src} alt={s.alt} />
             </Grid>
           ))}

@@ -16,9 +16,7 @@ export default function Hero() {
         sx={{ width: "100%", justifyContent: "space-between", rowGap: "40px" }}
       >
         <Grid
-          item
-          xs={12}
-          lg={5}
+          size={{ xs: 12, lg: 5 }}
           sx={{
             order: { lg: 2 },
             display: "flex",
@@ -30,9 +28,7 @@ export default function Hero() {
           <HeroImage />
         </Grid>
         <Grid
-          item
-          xs={12}
-          lg={5}
+          size={{ xs: 12, lg: 5 }}
           sx={{
             display: "flex",
             alignItems: "center",

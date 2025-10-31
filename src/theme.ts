@@ -23,6 +23,9 @@ const theme = createTheme({
     },
     paper: {
       main: "rgb(18, 18, 18)"
+    },
+    btnBlackTransparent: {
+      main: "rgba(0, 0, 0, 0.8)"
     }
   },
   typography: {
@@ -35,12 +38,14 @@ declare module "@mui/material/styles" {
     black: Palette["primary"];
     white: Palette["primary"];
     paper: Palette["primary"];
+    btnBlackTransparent: Palette["primary"];
   }
 
   interface PaletteOptions {
     black?: PaletteOptions["primary"];
     white?: PaletteOptions["primary"];
     paper?: PaletteOptions["primary"];
+    btnBlackTransparent?: PaletteOptions["primary"];
   }
 }
 
@@ -49,6 +54,7 @@ declare module "@mui/material/Button" {
     black: true;
     white: true;
     paper: true;
+    btnBlackTransparent: true;
   }
 }
 

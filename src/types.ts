@@ -9,3 +9,7 @@ export type SkillCardType = {
   src: string,
   alt: string
 }
+
+export type ProjectImagesDataType = {
+  fenzo: string[]
+}

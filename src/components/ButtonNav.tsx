@@ -18,7 +18,7 @@ function ButtonNav({
   disableUnderlined = false,
 }: ButtonNavType) {
   
-  const { isSkillsVisible, isEducationVisible, isHeroVisible } = useSectionsObserver();
+  const { isSkillsVisible, isEducationVisible, isHeroVisible, isProjectsVisible } = useSectionsObserver();
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
@@ -26,7 +26,8 @@ function ButtonNav({
       section === "" &&
       isHeroVisible &&
       !isSkillsVisible &&
-      !isEducationVisible
+      !isEducationVisible && 
+      !isProjectsVisible
     ) {
       btnRef.current?.classList.add("active", "text-gold");
     } else if (!isHeroVisible && section === "") {
@@ -36,7 +37,8 @@ function ButtonNav({
       section === "skills" &&
       isSkillsVisible &&
       !isHeroVisible &&
-      !isEducationVisible
+      !isEducationVisible &&
+      !isProjectsVisible
     ) {
       btnRef.current?.classList.add("active", "text-gold");
     } else if (!isSkillsVisible && section === "skills") {
@@ -46,13 +48,25 @@ function ButtonNav({
       section === "education" &&
       isEducationVisible &&
       !isSkillsVisible &&
-      !isHeroVisible
+      !isHeroVisible &&
+      !isProjectsVisible
     ) {
       btnRef.current?.classList.add("active", "text-gold");
     } else if (!isEducationVisible && section === "education") {
       btnRef.current?.classList.remove("active", "text-gold");
     }
-  }, [isEducationVisible, isSkillsVisible, isHeroVisible, section]);
+    if (
+      section === "projects" &&
+      isProjectsVisible &&
+      !isSkillsVisible &&
+      !isHeroVisible &&
+      !isEducationVisible
+    ) {
+      btnRef.current?.classList.add("active", "text-gold");
+    } else if (!isProjectsVisible && section === "projects") {
+      btnRef.current?.classList.remove("active", "text-gold");
+    }
+  }, [isEducationVisible, isSkillsVisible, isHeroVisible, isProjectsVisible, section]);
 
   return (
     <button

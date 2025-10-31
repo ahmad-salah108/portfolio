@@ -9,6 +9,8 @@ type SectionsObserverContextType = {
   isSkillsVisible: boolean;
   educationRef: RefObject<HTMLElement>;
   isEducationVisible: boolean;
+  projectsRef: RefObject<HTMLElement>;
+  isProjectsVisible: boolean;
 };
 
 const SectionsObserverContext = createContext(
@@ -30,6 +32,8 @@ export const SectionsObserverProvider = ({
   const isSkillsVisible = useIntersection(skillsRef);
   const educationRef = useRef<HTMLElement | null>(null);
   const isEducationVisible = useIntersection(educationRef);
+  const projectsRef = useRef<HTMLElement | null>(null);
+  const isProjectsVisible = useIntersection(projectsRef);
 
   return (
     <SectionsObserverContext.Provider
@@ -40,6 +44,8 @@ export const SectionsObserverProvider = ({
         isSkillsVisible,
         educationRef,
         isEducationVisible,
+        projectsRef,
+        isProjectsVisible
       }}
     >
       {children}

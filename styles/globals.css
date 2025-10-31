@@ -1,3 +1,6 @@
+@import url("styles.css");
+@import url("embla.css");
+
 :root {
   --main: 234, 179, 8;
   --white: 255, 255, 255;

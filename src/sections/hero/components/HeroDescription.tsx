@@ -22,7 +22,7 @@ const socials: SocialsType[] = [
   {
     title: "WhatsApp",
     icon: <WhatsAppIcon />,
-    url: "https://wa.me/+972592433871",
+    url: "https://wa.me/+970592433871",
   },
   {
     title: "Instagram",
@@ -62,10 +62,29 @@ export default function HeroDescription() {
       </Typography>
       <Typography mb={1} sx={{ lineHeight: "1.8rem" }}>
         Resourceful professional with successful track record in developing
-        innovative web designs and features. Possesses solid knowledge of
-        ReactJS, Typescript and NextJS with ability to quickly learn new
-        technologies. Demonstrated success in identifying and resolving complex
-        code issues.
+        innovative web designs and features. Possesses solid knowledge of &nbsp;
+        <Typography
+          component={"span"}
+          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 600 }}
+        >
+          React.js
+        </Typography>
+        ,{" "}
+        <Typography
+          component={"span"}
+          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 600 }}
+        >
+          TypeScript
+        </Typography>{" "}
+        and{" "}
+        <Typography
+          component={"span"}
+          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 600 }}
+        >
+          Next.js
+        </Typography>{" "}
+        with ability to quickly learn new technologies. Demonstrated success in
+        identifying and resolving complex code issues.
       </Typography>
       <Stack mb={2} direction={"row"}>
         {socials.map((s) => (
