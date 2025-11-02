@@ -6,6 +6,7 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "@/theme";
 import { SectionsObserverProvider } from "@/context/SectionsObserverContext";
 import Navbar from "@/components/Navbar";
+import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
   title: "Ahmad Salah",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={open_sans.className}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
+            <Toaster richColors/>
             <CssBaseline />
             <SectionsObserverProvider>
               <Navbar />

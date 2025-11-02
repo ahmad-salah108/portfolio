@@ -18,7 +18,7 @@ function ButtonNav({
   disableUnderlined = false,
 }: ButtonNavType) {
   
-  const { isSkillsVisible, isEducationVisible, isHeroVisible, isProjectsVisible } = useSectionsObserver();
+  const { isSkillsVisible, isEducationVisible, isHeroVisible, isProjectsVisible, isContactVisible } = useSectionsObserver();
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
@@ -27,7 +27,8 @@ function ButtonNav({
       isHeroVisible &&
       !isSkillsVisible &&
       !isEducationVisible && 
-      !isProjectsVisible
+      !isProjectsVisible &&
+      !isContactVisible
     ) {
       btnRef.current?.classList.add("active", "text-gold");
     } else if (!isHeroVisible && section === "") {
@@ -38,7 +39,8 @@ function ButtonNav({
       isSkillsVisible &&
       !isHeroVisible &&
       !isEducationVisible &&
-      !isProjectsVisible
+      !isProjectsVisible &&
+      !isContactVisible
     ) {
       btnRef.current?.classList.add("active", "text-gold");
     } else if (!isSkillsVisible && section === "skills") {
@@ -49,7 +51,8 @@ function ButtonNav({
       isEducationVisible &&
       !isSkillsVisible &&
       !isHeroVisible &&
-      !isProjectsVisible
+      !isProjectsVisible &&
+      !isContactVisible
     ) {
       btnRef.current?.classList.add("active", "text-gold");
     } else if (!isEducationVisible && section === "education") {
@@ -60,13 +63,26 @@ function ButtonNav({
       isProjectsVisible &&
       !isSkillsVisible &&
       !isHeroVisible &&
-      !isEducationVisible
+      !isEducationVisible &&
+      !isContactVisible
     ) {
       btnRef.current?.classList.add("active", "text-gold");
     } else if (!isProjectsVisible && section === "projects") {
       btnRef.current?.classList.remove("active", "text-gold");
     }
-  }, [isEducationVisible, isSkillsVisible, isHeroVisible, isProjectsVisible, section]);
+    if (
+      section === "contact" &&
+      isContactVisible &&
+      !isSkillsVisible &&
+      !isHeroVisible &&
+      !isEducationVisible &&
+      !isProjectsVisible
+    ) {
+      btnRef.current?.classList.add("active", "text-gold");
+    } else if (!isContactVisible && section === "contact") {
+      btnRef.current?.classList.remove("active", "text-gold");
+    }
+  }, [isEducationVisible, isSkillsVisible, isHeroVisible, isProjectsVisible, isContactVisible, section]);
 
   return (
     <button

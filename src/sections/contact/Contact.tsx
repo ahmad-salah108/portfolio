@@ -1,13 +1,14 @@
 "use client";
 
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
+import ContactForm from "./components/ContactForm";
 
 function Contact() {
   const { contactRef } = useSectionsObserver();
 
   return (
-    <Box id="education" className="section my-100" ref={contactRef}>
+    <Box id="education" className="section my-100" sx={{paddingBottom: '1000px'}} ref={contactRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"
@@ -21,6 +22,7 @@ function Contact() {
         >
           Contact Me
         </Typography>
+        <ContactForm />
       </Stack>
     </Box>
   );

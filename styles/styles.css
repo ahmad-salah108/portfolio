@@ -187,3 +187,13 @@
   transform-origin: left bottom;
   transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
 }
+.form-input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  background-color: rgb(var(--paper-light));
+  color: #fff;
+}

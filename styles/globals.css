@@ -5,6 +5,7 @@
   --main: 234, 179, 8;
   --white: 255, 255, 255;
   --paper: 18, 18, 18;
+  --paper-light: 30, 30, 30;
   scroll-behavior: smooth;
 }
 
