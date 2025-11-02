@@ -13,7 +13,7 @@ function ProjectCard({ project }: { project: keyof ProjectImagesDataType }) {
         margin: "auto",
         background: (theme) => theme.palette.primary.main,
         width: "350px",
-        height: "520px",
+        height: "545px",
         // borderRadius: "10px",
         padding: "5px",
         boxShadow: (theme) => `0 0 25px -5px ${theme.palette.primary.main}`,
@@ -112,19 +112,19 @@ function ProjectCard({ project }: { project: keyof ProjectImagesDataType }) {
             dolores itaque expedita inventore? Lorem ipsum dolor, sit amet
             consectetur adipisicing elit. Officiis, dignissimos.
           </Typography>
-          <Stack direction={"row"} sx={{ marginTop: "10px", gap: "10px" }}>
+          <Stack direction={"row"} sx={{ marginTop: "30px", gap: "10px" }}>
             <Button
-              disabled
-              variant="contained"
+              // disabled
+              variant="outlined"
               size="small"
-              color="btnBlackTransparent"
+              color="primary"
             >
               <GitHubIcon sx={{ fontSize: "1.2rem" }} /> &nbsp; View Code
             </Button>
             <Button
               variant="contained"
               size="small"
-              color="btnBlackTransparent"
+              color="primary"
             >
               <OpenInNewIcon sx={{ fontSize: "1.2rem" }} /> &nbsp; View Live
             </Button>

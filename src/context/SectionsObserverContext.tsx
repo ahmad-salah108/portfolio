@@ -3,14 +3,16 @@ import { useIntersection } from "@/hooks/useIntersection";
 import React, { createContext, RefObject, useContext, useRef } from "react";
 
 type SectionsObserverContextType = {
-  heroRef: RefObject<HTMLElement>;
+  heroRef: RefObject<HTMLElement | null>;
   isHeroVisible: boolean;
-  skillsRef: RefObject<HTMLElement>;
+  skillsRef: RefObject<HTMLElement | null>;
   isSkillsVisible: boolean;
-  educationRef: RefObject<HTMLElement>;
+  educationRef: RefObject<HTMLElement | null>;
   isEducationVisible: boolean;
-  projectsRef: RefObject<HTMLElement>;
+  projectsRef: RefObject<HTMLElement | null>;
   isProjectsVisible: boolean;
+  contactRef: RefObject<HTMLElement | null>;
+  isContactVisible: boolean;
 };
 
 const SectionsObserverContext = createContext(
@@ -34,6 +36,8 @@ export const SectionsObserverProvider = ({
   const isEducationVisible = useIntersection(educationRef);
   const projectsRef = useRef<HTMLElement | null>(null);
   const isProjectsVisible = useIntersection(projectsRef);
+  const contactRef = useRef<HTMLElement | null>(null);
+  const isContactVisible = useIntersection(projectsRef);
 
   return (
     <SectionsObserverContext.Provider
@@ -45,7 +49,9 @@ export const SectionsObserverProvider = ({
         educationRef,
         isEducationVisible,
         projectsRef,
-        isProjectsVisible
+        isProjectsVisible,
+        contactRef,
+        isContactVisible
       }}
     >
       {children}

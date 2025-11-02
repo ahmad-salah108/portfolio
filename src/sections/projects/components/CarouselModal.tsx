@@ -25,10 +25,32 @@ export default function CarouselModal({
   const Images = projectImages[project].map((url) => (
     <Image
       src={url}
-      alt={project}
-      width={400}
-      height={400}
-      style={{ objectFit: "contain" }}
+      alt={`${project} project image`}
+      width={600}
+      height={600}
+      sizes="(max-width: 768px) 300px, 600px"
+      loading="lazy"
+      style={{
+        objectFit: "contain",
+        width: "100%",
+        maxWidth: "600px",
+        height: "auto",
+        margin: "auto",
+        borderRadius: "4px",
+      }}
+    />
+  ));
+  const Thumbnails = projectImages[project].map((url) => (
+    <Image
+      src={url}
+      alt={`${project} project thumbnail`}
+      width={100}
+      height={100}
+      loading="lazy"
+      style={{
+        objectFit: "cover",
+        borderRadius: "4px",
+      }}
     />
   ));
 
@@ -55,6 +77,7 @@ export default function CarouselModal({
           zIndex: "2",
           transition: "all 0.3s",
           opacity: "0",
+          backdropFilter: "blur(3px)",
         }}
       >
         <CollectionsOutlinedIcon /> &nbsp; Open Gallery
@@ -66,14 +89,28 @@ export default function CarouselModal({
         aria-describedby="alert-dialog-description"
         sx={{
           "& .MuiPaper-root": {
-            background: (theme) => theme.palette.paper.main,
+            background: (theme) => theme.palette.paperTransparent.main,
+            backdropFilter: "blur(20px)",
+            maxWidth: "1000px",
+            height: {
+              xs: "550px",
+              sm: "600px",
+            },
+            overflow: "hidden",
           },
         }}
       >
-        <DialogContent>
+        <DialogContent
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <ImageCarousel
             slides={Images}
             options={OPTIONS}
+            thumbnails={Thumbnails}
           />
         </DialogContent>
         {/* <DialogActions>

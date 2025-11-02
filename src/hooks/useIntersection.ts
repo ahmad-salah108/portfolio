@@ -1,9 +1,9 @@
 import { RefObject, useEffect, useState } from "react";
 
-export const useIntersection = (
-  element: RefObject<Element>,
+export function useIntersection(
+  element: RefObject<HTMLElement | null>,
   rootMargin: string = "0px"
-) => {
+): boolean {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export const useIntersection = (
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting)
+        setIsVisible(entry.isIntersecting);
       },
       { rootMargin }
     );
@@ -25,4 +25,4 @@ export const useIntersection = (
   }, [element, rootMargin]);
 
   return isVisible;
-};
+}

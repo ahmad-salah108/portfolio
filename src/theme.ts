@@ -9,24 +9,27 @@ const theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: '#eab308ff',
+      main: "#eab308ff",
     },
     black: {
       main: "#000",
     },
     white: {
-      main: '#fff'
+      main: "#fff",
     },
     background: {
-      default: '#000',
-      paper: '#000'
+      default: "#000",
+      paper: "#000",
     },
     paper: {
-      main: "rgb(18, 18, 18)"
+      main: "rgb(18, 18, 18)",
     },
     btnBlackTransparent: {
-      main: "rgba(0, 0, 0, 0.8)"
-    }
+      main: "rgba(0, 0, 0, 0.6)",
+    },
+    paperTransparent: {
+      main: "rgb(50, 50, 50, 0.5)",
+    },
   },
   typography: {
     fontFamily: open_sans.style.fontFamily,
@@ -39,6 +42,7 @@ declare module "@mui/material/styles" {
     white: Palette["primary"];
     paper: Palette["primary"];
     btnBlackTransparent: Palette["primary"];
+    paperTransparent: Palette["primary"];
   }
 
   interface PaletteOptions {
@@ -46,6 +50,7 @@ declare module "@mui/material/styles" {
     white?: PaletteOptions["primary"];
     paper?: PaletteOptions["primary"];
     btnBlackTransparent?: PaletteOptions["primary"];
+    paperTransparent?: PaletteOptions["primary"];
   }
 }
 
@@ -55,8 +60,8 @@ declare module "@mui/material/Button" {
     white: true;
     paper: true;
     btnBlackTransparent: true;
+    paperTransparent: true;
   }
 }
-
 
 export default theme;

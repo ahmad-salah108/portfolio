@@ -20,7 +20,6 @@ export default function HeroImage() {
           alt="Ahmad Salah Photo"
           width={300}
           height={300}
-          quality={100}
           priority
         />
       ) : (
@@ -29,7 +28,6 @@ export default function HeroImage() {
           alt="Ahmad Salah Photo"
           width={400}
           height={400}
-          quality={100}
           priority
         />
       )}
