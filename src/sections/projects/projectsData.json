@@ -6,11 +6,11 @@
     "thumbnail": "/projects/fenzo/fenzo1.webp",
     "github": {
       "disabled": false,
-      "url": "https://github.com"
+      "url": "https://github.com/ahmad-salah108/fenzo-nextjs"
     },
     "live": {
       "disabled": false,
-      "url": "https://github.com"
+      "url": "https://fenzo9.vercel.app/"
     },
     "images": [
       "/projects/fenzo/fenzo1.webp",
@@ -19,6 +19,68 @@
       "/projects/fenzo/fenzo4.webp",
       "/projects/fenzo/fenzo5.webp",
       "/projects/fenzo/fenzo6.webp"
+    ]
+  },
+  {
+    "title": "Memorization Association",
+    "subtitle": "LMS",
+    "description": "Memorization Association is a website where users can submit exams with the ability to take breaks, and keep updated with company news and photo gallery. Website is Multilingual (English, Arabic).",
+    "thumbnail": "/projects/memo/memo1.webp",
+    "github": {
+      "disabled": false,
+      "url": "https://github.com/ahmad-salah108/memorization-association"
+    },
+    "live": {
+      "disabled": false,
+      "url": "https://memorization-association.vercel.app/"
+    },
+    "images": [
+      "/projects/memo/memo1.webp",
+      "/projects/memo/memo2.webp",
+      "/projects/memo/memo3.webp",
+      "/projects/memo/memo4.webp"
+    ]
+  },
+  {
+    "title": "Vela",
+    "subtitle": "Chat App",
+    "description": "Vela is a private realtime chat application built for companies using React.js and MUI, featuring to-do lists, event management, and video/voice calling. The app is multilanguage and has both dark and light mode.",
+    "thumbnail": "/projects/vela/vela1.webp",
+    "github": {
+      "disabled": true,
+      "url": ""
+    },
+    "live": {
+      "disabled": true,
+      "url": ""
+    },
+    "images": [
+      "/projects/vela/vela2.webp",
+      "/projects/vela/vela3.webp",
+      "/projects/vela/vela4.webp",
+      "/projects/vela/vela5.webp"
+    ]
+  },
+  {
+    "title": "Fulink",
+    "subtitle": "mini ERP",
+    "description": "Fulink is a mini ERP system which is built using React.js, based on the (Fuse React Template) to ensure a scalable and professional structure. Implemented a role- and permission-based access system (SuperAdmin, Admins, Company Users) and integrated key third-party libraries such as Google Maps, Zod, and others.",
+    "thumbnail": "/projects/fulink/fulink1.webp",
+    "github": {
+      "disabled": true,
+      "url": ""
+    },
+    "live": {
+      "disabled": true,
+      "url": ""
+    },
+    "images": [
+      "/projects/fulink/fulink1.webp",
+      "/projects/fulink/fulink2.webp",
+      "/projects/fulink/fulink3.webp",
+      "/projects/fulink/fulink4.webp",
+      "/projects/fulink/fulink5.webp",
+      "/projects/fulink/fulink6.webp"
     ]
   }
 ]

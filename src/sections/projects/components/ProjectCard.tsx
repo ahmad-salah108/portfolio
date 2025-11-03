@@ -65,7 +65,7 @@ function ProjectCard({ project }: { project: ProjectsDataType[0] }) {
               height: "100%",
               zIndex: "1",
               transition: "all 0.3s",
-              background: (theme) => alpha(theme.palette.black.main, 0.2),
+              background: (theme) => alpha(theme.palette.black.main, 0.1),
             }}
           ></Box>
           <Box className="project-image" sx={{ transition: "all 0.3s" }}>
@@ -108,7 +108,7 @@ function ProjectCard({ project }: { project: ProjectsDataType[0] }) {
               width: "50px",
               height: "1px",
               background: (theme) => alpha(theme.palette.white.main, 0.5),
-              margin: "15px 0",
+              margin: "15px 0 10px",
             }}
           ></Box>
           <Typography sx={{ fontSize: "0.9rem", marginBottom: "30px" }}>

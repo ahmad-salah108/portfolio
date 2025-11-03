@@ -1,12 +1,13 @@
 import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
 import Link from "next/link";
-import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { Facebook, Mail, MailOutline } from "@mui/icons-material";
+import { MailOutline } from "@mui/icons-material";
 import { SocialsType } from "@/types";
+import { scrollToSection } from "@/utils";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 
 const socials: SocialsType[] = [
   {
@@ -28,11 +29,6 @@ const socials: SocialsType[] = [
     title: "Instagram",
     icon: <InstagramIcon />,
     url: "https://www.instagram.com/ahmad_salah108/",
-  },
-  {
-    title: "Facebook",
-    icon: <Facebook />,
-    url: "https://www.facebook.com/mr2jack",
   },
   {
     title: "Email",
@@ -99,9 +95,16 @@ export default function HeroDescription() {
           </Link>
         ))}
       </Stack>
-      <Stack direction={"row"} sx={{ gap: "1rem" }}>
-        <Button variant="contained">Hire</Button>
-        <Button variant="outlined">Contact</Button>
+      <Stack direction={"row"} sx={{ gap: "1rem", flexWrap: "wrap" }}>
+        <Button variant="contained" onClick={() => scrollToSection("contact")}>
+          Contact
+        </Button>
+        <Link href={"/my-resume.pdf"} target="_blank" type="application/pdf">
+          <Button variant="outlined">
+            Download Resume &nbsp;
+            <CloudDownloadIcon sx={{ fontSize: "1.3rem" }} />
+          </Button>
+        </Link>
       </Stack>
     </Box>
   );
