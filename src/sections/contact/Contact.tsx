@@ -8,11 +8,11 @@ function Contact() {
   const { contactRef } = useSectionsObserver();
 
   return (
-    <Box id="education" className="section my-100" sx={{paddingBottom: '1000px'}} ref={contactRef}>
+    <Box id="contact" className="section my-200" ref={contactRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"
-          className="section-heading text-gold"
+          className="section-heading text-gold contact-heading"
           sx={{
             fontWeight: "500",
             letterSpacing: "0.3rem",

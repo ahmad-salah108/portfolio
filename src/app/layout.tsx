@@ -6,7 +6,7 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "@/theme";
 import { SectionsObserverProvider } from "@/context/SectionsObserverContext";
 import Navbar from "@/components/Navbar";
-import { Toaster } from 'sonner'
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Ahmad Salah",
@@ -21,16 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={open_sans.className}>
-        <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
-            <Toaster richColors/>
-            <CssBaseline />
-            <SectionsObserverProvider>
+        <SectionsObserverProvider>
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={theme}>
+              <Toaster richColors />
+              <CssBaseline />
               <Navbar />
               {children}
-            </SectionsObserverProvider>
-          </ThemeProvider>
-        </AppRouterCacheProvider>
+            </ThemeProvider>
+          </AppRouterCacheProvider>
+        </SectionsObserverProvider>
       </body>
     </html>
   );

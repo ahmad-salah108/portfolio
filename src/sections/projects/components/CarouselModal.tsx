@@ -8,47 +8,47 @@ import DialogTitle from "@mui/material/DialogTitle";
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
 import ImageCarousel from "./ImageCarousel";
 import { EmblaOptionsType } from "embla-carousel";
-import type { ProjectImagesDataType } from "@/types.ts";
-import projectImagesData from "../projectImagesData.json";
+import type { ProjectsDataType } from "@/types.ts";
 import Image from "next/image";
-
-const projectImages: ProjectImagesDataType = projectImagesData;
+import { Box } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function CarouselModal({
   project,
 }: {
-  project: keyof ProjectImagesDataType;
+  project: ProjectsDataType[0];
 }) {
   const [open, setOpen] = React.useState(false);
   const OPTIONS: EmblaOptionsType = {};
 
-  const Images = projectImages[project].map((url) => (
+  const Images = project.images.map((url) => (
     <Image
       src={url}
-      alt={`${project} project image`}
+      alt={`project image`}
       width={600}
-      height={600}
+      height={400}
       sizes="(max-width: 768px) 300px, 600px"
       loading="lazy"
+      onClick={()=>window.open(url, "_blank")}
       style={{
         objectFit: "contain",
         width: "100%",
         maxWidth: "600px",
-        height: "auto",
         margin: "auto",
         borderRadius: "4px",
+        cursor: 'pointer'
       }}
     />
   ));
-  const Thumbnails = projectImages[project].map((url) => (
+  const Thumbnails = project.images.map((url) => (
     <Image
       src={url}
-      alt={`${project} project thumbnail`}
+      alt={`project thumbnail`}
       width={100}
       height={100}
       loading="lazy"
       style={{
-        objectFit: "cover",
+        objectFit: "contain",
         borderRadius: "4px",
       }}
     />
@@ -93,13 +93,16 @@ export default function CarouselModal({
             backdropFilter: "blur(20px)",
             maxWidth: "1000px",
             height: {
-              xs: "550px",
-              sm: "600px",
+              xs: "586px",
+              sm: "636px",
             },
             overflow: "hidden",
           },
         }}
       >
+        <Button sx={{width: 'fit-content', margin: '10px 10px 0 auto'}} onClick={handleClose}>
+          <CloseIcon/>
+        </Button>
         <DialogContent
           sx={{
             display: "flex",

@@ -53,7 +53,7 @@ const ImageCarousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport" ref={emblaMainRef}>
         <div className="embla__container">
           {slides.map((el, index) => (
-            <Box key={index} className="embla__slide">{el}</Box>
+            <Box key={index} className="embla__slide" sx={{height: {xs: '350px', sm: "400px"}}}>{el}</Box>
           ))}
         </div>
       </div>

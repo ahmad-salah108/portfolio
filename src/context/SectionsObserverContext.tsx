@@ -37,7 +37,7 @@ export const SectionsObserverProvider = ({
   const projectsRef = useRef<HTMLElement | null>(null);
   const isProjectsVisible = useIntersection(projectsRef);
   const contactRef = useRef<HTMLElement | null>(null);
-  const isContactVisible = useIntersection(projectsRef);
+  const isContactVisible = useIntersection(contactRef);
 
   return (
     <SectionsObserverContext.Provider

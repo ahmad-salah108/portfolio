@@ -1,36 +1,32 @@
 "use client";
 
-import { Box, Theme, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/material";
 import Image from "next/image";
-import React from "react";
 
 export default function HeroImage() {
-  const downSm = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
 
   return (
     <Box
       sx={{
-        width: "fit-content",
+        width: {
+          xs: "300px",
+          sm: "400px",
+        },
+        height: {
+          xs: "300px",
+          sm: "400px",
+        },
+        position: "relative",
       }}
       className="center"
     >
-      {downSm ? (
-        <Image
-          src={`/ahmadsalah.webp`}
-          alt="Ahmad Salah Photo"
-          width={300}
-          height={300}
-          priority
-        />
-      ) : (
-        <Image
-          src={`/ahmadsalah.webp`}
-          alt="Ahmad Salah Photo"
-          width={400}
-          height={400}
-          priority
-        />
-      )}
+      <Image
+        fill
+        src={`/ahmadsalah.webp`}
+        alt="Ahmad Salah Photo"
+        sizes="(max-width: 600px) 300px, 400px"
+        preload
+      />
     </Box>
   );
 }

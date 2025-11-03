@@ -39,8 +39,9 @@ function ContactForm() {
           required
           type="text"
           className={`form-input ${open_sans.className}`}
-          placeholder="Subject..."
+          placeholder="Subject"
           name="subject"
+          autoComplete="off"
         />
         <textarea
           required
@@ -49,6 +50,7 @@ function ContactForm() {
           style={{ resize: "vertical" }}
           rows={10}
           name="message"
+          autoComplete="off"
         />
         <SubmitButton />
       </Stack>

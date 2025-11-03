@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Fenzo",
+    "subtitle": "eCommerce",
+    "description": "Fenzo is an e-commerce website focused on wedding decorations and rentals. Developed using Next.js & TailwindCSS.",
+    "thumbnail": "/projects/fenzo/fenzo1.webp",
+    "github": {
+      "disabled": false,
+      "url": "https://github.com"
+    },
+    "live": {
+      "disabled": false,
+      "url": "https://github.com"
+    },
+    "images": [
+      "/projects/fenzo/fenzo1.webp",
+      "/projects/fenzo/fenzo2.webp",
+      "/projects/fenzo/fenzo3.webp",
+      "/projects/fenzo/fenzo4.webp",
+      "/projects/fenzo/fenzo5.webp",
+      "/projects/fenzo/fenzo6.webp"
+    ]
+  }
+]

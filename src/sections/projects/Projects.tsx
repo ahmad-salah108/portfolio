@@ -3,13 +3,16 @@
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import ProjectCard from "./components/ProjectCard";
+import projectsData from "./projectsData.json"
+import { ProjectsDataType } from "@/types";
 
 function Projects() {
   const { projectsRef } = useSectionsObserver();
+  const projects = projectsData as ProjectsDataType;
 
 
   return (
-    <Box id="projects" className="section my-100" ref={projectsRef}>
+    <Box id="projects" className="section my-200" ref={projectsRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"
@@ -23,25 +26,12 @@ function Projects() {
         >
           Projects
         </Typography>
-        <Grid container spacing={2} sx={{rowGap: '2rem'}}>
-          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-            <ProjectCard project="fenzo"/>
-          </Grid>
-          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-            <ProjectCard project="fenzo"/>
-          </Grid>
-          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-            <ProjectCard project="fenzo"/>
-          </Grid>
-          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-            <ProjectCard project="fenzo"/>
-          </Grid>
-          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-            <ProjectCard project="fenzo"/>
-          </Grid>
-          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
-            <ProjectCard project="fenzo"/>
-          </Grid>
+        <Grid container spacing={2} sx={{rowGap: '3rem', alignItems: 'stretch'}}>
+          {projects?.map(p => (
+            <Grid key={p.title} size={{ xs: 12, md: 6, lg: 4 }}>
+              <ProjectCard project={p}/>
+            </Grid>
+          ))}
         </Grid>
       </Stack>
     </Box>

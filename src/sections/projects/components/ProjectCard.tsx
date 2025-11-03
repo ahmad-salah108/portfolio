@@ -4,21 +4,24 @@ import Image from "next/image";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CarouselModal from "./CarouselModal";
-import { ProjectImagesDataType } from "@/types";
+import { ProjectsDataType } from "@/types";
+import Link from "next/link";
 
-function ProjectCard({ project }: { project: keyof ProjectImagesDataType }) {
+function ProjectCard({ project }: { project: ProjectsDataType[0] }) {
   return (
     <Box
       sx={{
         margin: "auto",
         background: (theme) => theme.palette.primary.main,
         width: "350px",
-        height: "545px",
+        height: "100%", //"545px",
+        minHeight: "545px",
         // borderRadius: "10px",
         padding: "5px",
         boxShadow: (theme) => `0 0 25px -5px ${theme.palette.primary.main}`,
         transition: "all 0.3s",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         "&:hover": {
@@ -62,12 +65,12 @@ function ProjectCard({ project }: { project: keyof ProjectImagesDataType }) {
               height: "100%",
               zIndex: "1",
               transition: "all 0.3s",
-              background: (theme) => alpha(theme.palette.black.main, 0.3),
+              background: (theme) => alpha(theme.palette.black.main, 0.2),
             }}
           ></Box>
           <Box className="project-image" sx={{ transition: "all 0.3s" }}>
             <Image
-              src={"/projects/fenzo/fenzo-home-signed-out.webp"}
+              src={project.thumbnail}
               alt="fenzo"
               width={"340"}
               height={"200"}
@@ -79,12 +82,15 @@ function ProjectCard({ project }: { project: keyof ProjectImagesDataType }) {
           </Box>
           <CarouselModal project={project} />
         </Box>
-        <Box sx={{ padding: "15px" }}>
+        <Stack
+          direction={"column"}
+          sx={{ padding: "15px", height: "calc(100% - 200px)" }}
+        >
           <Typography
             variant="h1"
             sx={{ fontSize: "1rem", fontWeight: "700", letterSpacing: "1px" }}
           >
-            Fenzo
+            {project.title}
           </Typography>
           <Typography
             variant="h2"
@@ -95,7 +101,7 @@ function ProjectCard({ project }: { project: keyof ProjectImagesDataType }) {
               opacity: "0.8",
             }}
           >
-            eCommerce
+            {project.subtitle}
           </Typography>
           <Box
             sx={{
@@ -105,31 +111,47 @@ function ProjectCard({ project }: { project: keyof ProjectImagesDataType }) {
               margin: "15px 0",
             }}
           ></Box>
-          <Typography sx={{ fontSize: "0.9rem" }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
-            possimus soluta sint suscipit nihil facere aspernatur magnam quidem
-            id. Quidem exercitationem voluptatum autem modi aliquid molestias
-            dolores itaque expedita inventore? Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Officiis, dignissimos.
+          <Typography sx={{ fontSize: "0.9rem", marginBottom: "30px" }}>
+            {project.description}
           </Typography>
-          <Stack direction={"row"} sx={{ marginTop: "30px", gap: "10px" }}>
-            <Button
-              // disabled
-              variant="outlined"
-              size="small"
-              color="primary"
+          <Stack
+            direction={"row"}
+            sx={{ marginTop: "auto", marginBottom: "5px", gap: "15px" }}
+          >
+            <Link
+              href={project.github.url}
+              target="_blank"
+              style={{
+                pointerEvents: project.github.disabled ? "none" : "initial",
+              }}
             >
-              <GitHubIcon sx={{ fontSize: "1.2rem" }} /> &nbsp; View Code
-            </Button>
-            <Button
-              variant="contained"
-              size="small"
-              color="primary"
+              <Button
+                disabled={project.github.disabled}
+                variant="outlined"
+                size="small"
+                color="primary"
+              >
+                <GitHubIcon sx={{ fontSize: "1.2rem" }} /> &nbsp; View Code
+              </Button>
+            </Link>
+            <Link
+              href={project.live.url}
+              target="_blank"
+              style={{
+                pointerEvents: project.live.disabled ? "none" : "initial",
+              }}
             >
-              <OpenInNewIcon sx={{ fontSize: "1.2rem" }} /> &nbsp; View Live
-            </Button>
+              <Button
+                disabled={project.live.disabled}
+                variant="contained"
+                size="small"
+                color="primary"
+              >
+                <OpenInNewIcon sx={{ fontSize: "1.2rem" }} /> &nbsp; View Live
+              </Button>
+            </Link>
           </Stack>
-        </Box>
+        </Stack>
       </Box>
     </Box>
   );

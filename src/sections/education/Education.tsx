@@ -10,7 +10,7 @@ function Education() {
   const { educationRef } = useSectionsObserver();
 
   return (
-    <Box id="education" className="section my-100" ref={educationRef}>
+    <Box id="education" className="section my-200" ref={educationRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"

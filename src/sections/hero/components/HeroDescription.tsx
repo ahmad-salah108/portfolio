@@ -62,24 +62,24 @@ export default function HeroDescription() {
       </Typography>
       <Typography mb={1} sx={{ lineHeight: "1.8rem" }}>
         Resourceful professional with successful track record in developing
-        innovative web designs and features. Possesses solid knowledge of &nbsp;
+        innovative web designs and features. Possesses solid knowledge of&nbsp;
         <Typography
           component={"span"}
-          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 600 }}
+          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 700 }}
         >
           React.js
         </Typography>
         ,{" "}
         <Typography
           component={"span"}
-          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 600 }}
+          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 700 }}
         >
           TypeScript
         </Typography>{" "}
         and{" "}
         <Typography
           component={"span"}
-          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 600 }}
+          sx={{ color: (theme) => theme.palette.primary.main, fontWeight: 700 }}
         >
           Next.js
         </Typography>{" "}
