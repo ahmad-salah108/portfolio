@@ -82,7 +82,7 @@ export default function HeroDescription() {
         with ability to quickly learn new technologies. Demonstrated success in
         identifying and resolving complex code issues.
       </Typography>
-      <Stack mb={2} direction={"row"}>
+      <Stack mb={4} direction={"row"}>
         {socials.map((s) => (
           <Link
             key={s.url}
