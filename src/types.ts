@@ -18,7 +18,7 @@ export type SkillCardType = {
   alt: string;
 };
 
-export type ProjectsDataType = {
+export type ProjectDataType = {
   title: string;
   subtitle: string;
   description: string;
@@ -32,4 +32,4 @@ export type ProjectsDataType = {
     url: string;
   };
   images: string[];
-}[];
+};

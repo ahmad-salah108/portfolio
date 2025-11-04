@@ -8,7 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
 import ImageCarousel from "./ImageCarousel";
 import { EmblaOptionsType } from "embla-carousel";
-import type { ProjectsDataType } from "@/types.ts";
+import type { ProjectDataType } from "@/types.ts";
 import Image from "next/image";
 import { Box } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
@@ -16,7 +16,7 @@ import CloseIcon from '@mui/icons-material/Close';
 export default function CarouselModal({
   project,
 }: {
-  project: ProjectsDataType[0];
+  project: ProjectDataType;
 }) {
   const [open, setOpen] = React.useState(false);
   const OPTIONS: EmblaOptionsType = {};

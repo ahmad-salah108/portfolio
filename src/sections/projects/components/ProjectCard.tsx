@@ -4,10 +4,10 @@ import Image from "next/image";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import CarouselModal from "./CarouselModal";
-import { ProjectsDataType } from "@/types";
+import { ProjectDataType } from "@/types";
 import Link from "next/link";
 
-function ProjectCard({ project }: { project: ProjectsDataType[0] }) {
+function ProjectCard({ project }: { project: ProjectDataType }) {
   return (
     <Box
       sx={{

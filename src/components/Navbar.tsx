@@ -161,7 +161,7 @@ export default function Navbar() {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
+              sx={{ mr: 2, display: { md: "none" } }}
             >
               <MenuIcon />
             </IconButton>
@@ -174,7 +174,7 @@ export default function Navbar() {
                   letterSpacing: "2px",
                 },
                 flexGrow: 1,
-                textAlign: { xs: "end", sm: "start" },
+                textAlign: { xs: "end", md: "start" },
               }}
             >
               Ahmad{" "}
@@ -186,7 +186,7 @@ export default function Navbar() {
                 Salah
               </Typography>
             </Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
               <Stack direction={"row"} spacing={3}>
                 <ButtonNav section="" content="Home" />
                 <ButtonNav section="experience" content="Experience" />

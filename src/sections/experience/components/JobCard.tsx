@@ -15,10 +15,10 @@ function JobCard({ data }: { data: JobCardType }) {
       </Typography>
       <Stack>
         <Typography sx={{ fontWeight: "700" }}>{data.job}</Typography>
-        <Typography color="offWhite" sx={{ marginBottom: "0.6rem" }}>
+        <Typography color="offWhite" sx={{ marginBottom: "1rem" }}>
           {data.company}
         </Typography>
-        <ul className="work-list" style={{ marginBottom: "0.6rem" }}>
+        <ul className="work-list" style={{ marginBottom: "1rem" }}>
           {data.description.map((d, i) => (
             <li key={i} style={{ marginBottom: "10px" }}>
               <Typography color="offWhite">
