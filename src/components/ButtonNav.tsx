@@ -18,6 +18,7 @@ function ButtonNav({
   disableUnderlined = false,
 }: ButtonNavType) {
   const {
+    isExperienceVisible,
     isSkillsVisible,
     isEducationVisible,
     isHeroVisible,
@@ -29,6 +30,7 @@ function ButtonNav({
   useEffect(() => {
     const sections = [
       { name: "", visible: isHeroVisible },
+      { name: "experience", visible: isExperienceVisible },
       { name: "skills", visible: isSkillsVisible },
       { name: "education", visible: isEducationVisible },
       { name: "projects", visible: isProjectsVisible },
@@ -47,6 +49,7 @@ function ButtonNav({
       }
     });
   }, [
+    isExperienceVisible,
     isEducationVisible,
     isSkillsVisible,
     isHeroVisible,

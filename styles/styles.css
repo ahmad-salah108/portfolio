@@ -88,7 +88,7 @@
 }
 
 @media (max-width: 417px) {
-  .contact-heading{
+  .responsive-heading{
     font-size: 2.9rem !important;
   }
 }
@@ -202,4 +202,7 @@
   font-size: 1rem;
   background-color: rgb(var(--paper-light));
   color: #fff;
+}
+.work-list li::marker{
+  color: #aaa
 }

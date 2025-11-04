@@ -111,7 +111,7 @@ function ProjectCard({ project }: { project: ProjectsDataType[0] }) {
               margin: "15px 0 10px",
             }}
           ></Box>
-          <Typography sx={{ fontSize: "0.9rem", marginBottom: "30px" }}>
+          <Typography color="offWhite.dark" sx={{ fontSize: "0.9rem", marginBottom: "30px" }}>
             {project.description}
           </Typography>
           <Stack

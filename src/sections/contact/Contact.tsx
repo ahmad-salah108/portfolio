@@ -12,7 +12,7 @@ function Contact() {
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"
-          className="section-heading text-gold contact-heading"
+          className="section-heading text-gold responsive-heading"
           sx={{
             fontWeight: "500",
             letterSpacing: "0.3rem",

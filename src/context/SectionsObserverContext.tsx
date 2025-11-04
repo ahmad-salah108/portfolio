@@ -5,6 +5,8 @@ import React, { createContext, RefObject, useContext, useRef } from "react";
 type SectionsObserverContextType = {
   heroRef: RefObject<HTMLElement | null>;
   isHeroVisible: boolean;
+  experienceRef: RefObject<HTMLElement | null>;
+  isExperienceVisible: boolean;
   skillsRef: RefObject<HTMLElement | null>;
   isSkillsVisible: boolean;
   educationRef: RefObject<HTMLElement | null>;
@@ -30,6 +32,8 @@ export const SectionsObserverProvider = ({
 }) => {
   const heroRef = useRef<HTMLElement | null>(null);
   const isHeroVisible = useIntersection(heroRef);
+  const experienceRef = useRef<HTMLElement | null>(null);
+  const isExperienceVisible = useIntersection(experienceRef);
   const skillsRef = useRef<HTMLElement | null>(null);
   const isSkillsVisible = useIntersection(skillsRef);
   const educationRef = useRef<HTMLElement | null>(null);
@@ -44,6 +48,8 @@ export const SectionsObserverProvider = ({
       value={{
         heroRef,
         isHeroVisible,
+        experienceRef,
+        isExperienceVisible,
         skillsRef,
         isSkillsVisible,
         educationRef,

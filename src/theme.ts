@@ -17,6 +17,10 @@ const theme = createTheme({
     white: {
       main: "#fff",
     },
+    offWhite: {
+      main: "#aaa",
+      dark: '#ccc'
+    },
     background: {
       default: "#000",
       paper: "#000",
@@ -40,6 +44,7 @@ declare module "@mui/material/styles" {
   interface Palette {
     black: Palette["primary"];
     white: Palette["primary"];
+    offWhite: Palette["primary"];
     paper: Palette["primary"];
     btnBlackTransparent: Palette["primary"];
     paperTransparent: Palette["primary"];
@@ -48,6 +53,7 @@ declare module "@mui/material/styles" {
   interface PaletteOptions {
     black?: PaletteOptions["primary"];
     white?: PaletteOptions["primary"];
+    offWhite?: PaletteOptions["primary"];
     paper?: PaletteOptions["primary"];
     btnBlackTransparent?: PaletteOptions["primary"];
     paperTransparent?: PaletteOptions["primary"];
@@ -58,6 +64,7 @@ declare module "@mui/material/Button" {
   interface ButtonPropsColorOverrides {
     black: true;
     white: true;
+    offWhite: true;
     paper: true;
     btnBlackTransparent: true;
     paperTransparent: true;

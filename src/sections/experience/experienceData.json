@@ -1,0 +1,40 @@
+[
+  {
+    "date": "2023 — Present",
+    "job": "Front-End Developer",
+    "company": "Freelance",
+    "description": [
+      "Currently developing Fenzo using Next.js & TailwindCSS, an e-commerce website focused on wedding decorations and rentals.",
+      "Delivered multiple client projects using modern web technologies, maintaining top-tier performance, accessibility, and responsiveness across devices."
+    ],
+    "languages": ["React.js", "Next.js", "TailwindCSS", "Material UI"]
+  },
+  {
+    "date": "03/2023 — 11/2023",
+    "job": "Front-End Developer",
+    "company": "Makla for IT Solutions",
+    "description": [
+      "Built a mini ERP system using React.js, based on the Fuse React Template , to ensure a scalable and professional structure. Implemented a role- and permission-based access system (SuperAdmin, Admins, Company Users) and integrated key third-party libraries such as Google Maps, Zod, and others.",
+      "Developed an educational platform for English language learning, designed for both students and teachers to interact and manage learning materials.",
+      "Collaborated closely with backend developers to integrate well-structured REST APIs and ensure seamless data flow.",
+      "Worked with UI/UX designers to implement responsive, user-friendly, and accessible interfaces.",
+      "Wrote clean, optimized, and maintainable code under the guidance of an experienced team leader, following best practices and coding standards.",
+      "Ensured security best practices and data protection across the application stack."
+    ],
+    "languages": ["React.js", "Material UI", "TailwindCSS"]
+  },
+  {
+    "date": "07/2022 — 02/2023",
+    "job": "Front-End Developer",
+    "company": "Domino ICT",
+    "description": [
+      "Built Vela, a private chat application for companies using React.js and MUI, featuring to-do lists, event management, and video/voice calling.",
+      "Developed an interactive dashboard for a gas station using HTML, CSS, and JavaScript, improving data visibility and operational efficiency.",
+      "Enhanced and maintained features across multiple platforms using React.js, HTML, CSS, and JavaScript.",
+      "Designed and optimized layouts to improve usability, performance, and user experience.",
+      "Ensured cross-browser compatibility and implemented fully responsive designs for all supported devices.",
+      "Converted native applications into mobile-friendly, responsive web interfaces, improving accessibility and user reach."
+    ],
+    "languages": ["React.js", "Material UI", "TailwindCSS", "HTML", "CSS", "JavaScript"]
+  }
+]

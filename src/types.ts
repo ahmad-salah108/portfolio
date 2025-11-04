@@ -4,6 +4,14 @@ export type SocialsType = {
   title: string;
 };
 
+export type JobCardType = {
+  date: string;
+  job: string;
+  company: string;
+  description: string[];
+  languages: string[];
+};
+
 export type SkillCardType = {
   title: string;
   src: string;
