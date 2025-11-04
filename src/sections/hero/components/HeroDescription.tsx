@@ -99,7 +99,7 @@ export default function HeroDescription() {
         <Button variant="contained" onClick={() => scrollToSection("contact")}>
           Contact
         </Button>
-        <Link href={"/my-resume.pdf"} target="_blank" type="application/pdf">
+        <Link href={"/ahmadsalah-resume.pdf"} target="_blank" type="application/pdf">
           <Button variant="outlined">
             Download Resume &nbsp;
             <CloudDownloadIcon sx={{ fontSize: "1.3rem" }} />

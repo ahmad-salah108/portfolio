@@ -35,6 +35,11 @@
     "alt": "Typescript Icon"
   },
   {
+    "title": "React Query",
+    "src": "/icons/react-query-icon.svg",
+    "alt": "React Query Icon"
+  },
+  {
     "title": "Material UI",
     "src": "/icons/mui-icon.svg",
     "alt": "Material UI Icon"
