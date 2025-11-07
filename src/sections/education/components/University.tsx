@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 function University() {
   return (
-    <Box>
+    <Box component={'article'}>
       <Typography
         sx={{
           position: "absolute",

@@ -13,7 +13,7 @@ export default function Skills() {
   const { skillsRef } = useSectionsObserver();
   
   return (
-    <Box id="skills" className="section my-200" ref={skillsRef}>
+    <Box component={'section'} id="skills" className="section my-200" ref={skillsRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"

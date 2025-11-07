@@ -12,7 +12,7 @@ function Projects() {
 
 
   return (
-    <Box id="projects" className="section my-200" ref={projectsRef}>
+    <Box component={'section'} id="projects" className="section my-200" ref={projectsRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"

@@ -4,9 +4,9 @@ import { Box } from "@mui/material";
 import Image from "next/image";
 
 export default function HeroImage() {
-
   return (
     <Box
+      component={"aside"}
       sx={{
         width: {
           xs: "300px",

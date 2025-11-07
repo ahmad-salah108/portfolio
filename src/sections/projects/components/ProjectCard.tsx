@@ -10,6 +10,7 @@ import Link from "next/link";
 function ProjectCard({ project }: { project: ProjectDataType }) {
   return (
     <Box
+      component={"figure"}
       sx={{
         margin: "auto",
         background: (theme) => theme.palette.primary.main,
@@ -83,6 +84,7 @@ function ProjectCard({ project }: { project: ProjectDataType }) {
           <CarouselModal project={project} />
         </Box>
         <Stack
+          component={"figcaption"}
           direction={"column"}
           sx={{ padding: "15px", height: "calc(100% - 200px)" }}
         >
@@ -111,7 +113,10 @@ function ProjectCard({ project }: { project: ProjectDataType }) {
               margin: "15px 0 10px",
             }}
           ></Box>
-          <Typography color="offWhite.dark" sx={{ fontSize: "0.9rem", marginBottom: "30px" }}>
+          <Typography
+            color="offWhite"
+            sx={{ fontSize: "0.9rem", marginBottom: "30px" }}
+          >
             {project.description}
           </Typography>
           <Stack

@@ -143,7 +143,7 @@ export default function Navbar() {
   );
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box component={'nav'} sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         component="nav"

@@ -18,8 +18,7 @@ const theme = createTheme({
       main: "#fff",
     },
     offWhite: {
-      main: "#aaa",
-      dark: '#ccc'
+      main: "#bbb"
     },
     background: {
       default: "#000",

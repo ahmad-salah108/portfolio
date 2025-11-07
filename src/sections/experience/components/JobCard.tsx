@@ -4,6 +4,7 @@ import { alpha, Chip, Stack, Typography } from "@mui/material";
 function JobCard({ data }: { data: JobCardType }) {
   return (
     <Stack
+      component={"article"}
       sx={{
         columnGap: "3rem",
         flexDirection: { sm: "row" },
@@ -21,14 +22,12 @@ function JobCard({ data }: { data: JobCardType }) {
         <ul className="work-list" style={{ marginBottom: "1rem" }}>
           {data.description.map((d, i) => (
             <li key={i} style={{ marginBottom: "10px" }}>
-              <Typography color="offWhite">
-                {d}
-              </Typography>
+              <Typography color="offWhite">{d}</Typography>
             </li>
           ))}
         </ul>
         <Stack direction={"row"} sx={{ gap: "7px", flexWrap: "wrap" }}>
-          {data.languages.map(l => (
+          {data.languages.map((l) => (
             <Chip
               key={l}
               variant="outlined"

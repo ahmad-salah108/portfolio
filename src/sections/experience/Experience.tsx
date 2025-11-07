@@ -12,7 +12,7 @@ export default function Experience() {
   const { experienceRef } = useSectionsObserver();
 
   return (
-    <Box id="experience" className="section my-200" ref={experienceRef}>
+    <Box component={'section'} id="experience" className="section my-200" ref={experienceRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"

@@ -10,7 +10,7 @@ export default function Hero() {
   const { heroRef } = useSectionsObserver();
 
   return (
-    <Box id="hero" className="section" ref={heroRef}>
+    <Box component={'header'} id="hero" className="section" ref={heroRef}>
       <Grid
         container
         sx={{ width: "100%", justifyContent: "space-between", rowGap: "40px" }}
