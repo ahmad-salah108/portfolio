@@ -24,7 +24,7 @@
   {
     "title": "Memorization Association",
     "subtitle": "LMS",
-    "description": "Memorization Association is a website where users can submit exams with the ability to take breaks, and keep updated with company news and photo gallery. Website is Multilingual (English, Arabic).",
+    "description": "Memorization Association is a website where users can submit exams with the ability to take breaks, and keep updated with company news and photo gallery. The website is Multilingual (English, Arabic), It is built using React.js and MUI.",
     "thumbnail": "/projects/memo/memo1.webp",
     "github": {
       "disabled": false,
@@ -44,7 +44,7 @@
   {
     "title": "Vela",
     "subtitle": "Chat App",
-    "description": "Vela is a private realtime chat application built for companies using React.js and MUI, featuring to-do lists, event management, and video/voice calling. The app is multilanguage and has both dark and light mode.",
+    "description": "Vela is a private realtime chat application built for companies using React.js, MUI and Pusher.js, featuring to-do lists, event management, and video/voice calling. The app is multilanguage and has both dark and light mode.",
     "thumbnail": "/projects/vela/vela1.webp",
     "github": {
       "disabled": true,
@@ -64,7 +64,7 @@
   {
     "title": "Fulink",
     "subtitle": "mini ERP",
-    "description": "Fulink is a mini ERP system which is built using React.js, based on the (Fuse React Template) to ensure a scalable and professional structure. Implemented a role- and permission-based access system (SuperAdmin, Admins, Company Users) and integrated key third-party libraries such as Google Maps, Zod, and others.",
+    "description": "Fulink is a mini ERP system which is built using React.js and MUI, based on the (Fuse React Template) to ensure a scalable and professional structure. Implemented a role- and permission-based access system (SuperAdmin, Admins, Company Users) and integrated key third-party libraries such as Google Maps, Zod, and others.",
     "thumbnail": "/projects/fulink/fulink1.webp",
     "github": {
       "disabled": true,
@@ -81,6 +81,26 @@
       "/projects/fulink/fulink4.webp",
       "/projects/fulink/fulink5.webp",
       "/projects/fulink/fulink6.webp"
+    ]
+  },
+  {
+    "title": "Eram Games",
+    "subtitle": "Landing Page",
+    "description": "This is a landing page for a games production company called Eram Games. The website is developed using HTML and TailwindCSS.",
+    "thumbnail": "/projects/eram-games/eram1.png",
+    "github": {
+      "disabled": false,
+      "url": "https://github.com/ahmad-salah108/Eram-Games"
+    },
+    "live": {
+      "disabled": false,
+      "url": "https://ahmad-salah108.github.io/Eram-Games/"
+    },
+    "images": [
+      "/projects/eram-games/eram1.png",
+      "/projects/eram-games/eram2.jpg",
+      "/projects/eram-games/eram3.jpg",
+      "/projects/eram-games/eram4.jpg"
     ]
   }
 ]
