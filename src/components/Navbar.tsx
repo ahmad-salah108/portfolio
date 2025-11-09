@@ -18,6 +18,7 @@ import { Container, Stack, alpha } from "@mui/material";
 import { useHash } from "@/hooks/useHash";
 import { scrollToSection } from "@/utils";
 import ButtonNav from "./ButtonNav";
+import Link from "next/link";
 
 const drawerWidth = 240;
 
@@ -48,27 +49,29 @@ export default function Navbar() {
       }}
     >
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-        <Typography
-          variant="h1"
-          sx={{
-            "&, & span": {
-              fontWeight: "700",
-              fontSize: "1.1rem",
-              letterSpacing: "2px",
-            },
-            flexGrow: 1,
-            my: 2,
-          }}
-        >
-          Ahmad{" "}
+        <Link href={"/"}>
           <Typography
-            component={"span"}
-            color={"primary"}
-            className="text-shadow-gold"
+            variant="h1"
+            sx={{
+              "&, & span": {
+                fontWeight: "700",
+                fontSize: "1.1rem",
+                letterSpacing: "2px",
+              },
+              flexGrow: 1,
+              my: 2,
+            }}
           >
-            Salah
+            Ahmad{" "}
+            <Typography
+              component={"span"}
+              color={"primary"}
+              className="text-shadow-gold"
+            >
+              Salah
+            </Typography>
           </Typography>
-        </Typography>
+        </Link>
         <Divider />
         <List>
           <ButtonNav
@@ -143,7 +146,7 @@ export default function Navbar() {
   );
 
   return (
-    <Box component={'nav'} sx={{ display: "flex" }}>
+    <Box component={"nav"} sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         component="nav"
@@ -165,27 +168,33 @@ export default function Navbar() {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              variant="h1"
-              sx={{
-                "&, & span": {
-                  fontWeight: "700",
-                  fontSize: "1.1rem",
-                  letterSpacing: "2px",
-                },
-                flexGrow: 1,
-                textAlign: { xs: "end", md: "start" },
-              }}
-            >
-              Ahmad{" "}
-              <Typography
-                component={"span"}
-                color={"primary"}
-                className="text-shadow-gold"
+            <Box sx={{ flexGrow: 1, textAlign: { xs: "end", md: "start" } }}>
+              <Link
+                href={"/"}
+                style={{ display: "inline-block", width: "fit-content" }}
               >
-                Salah
-              </Typography>
-            </Typography>
+                <Typography
+                  variant="h1"
+                  sx={{
+                    "&, & span": {
+                      fontWeight: "700",
+                      fontSize: "1.1rem",
+                      letterSpacing: "2px",
+                    },
+                    width: "fit-content",
+                  }}
+                >
+                  Ahmad{" "}
+                  <Typography
+                    component={"span"}
+                    color={"primary"}
+                    className="text-shadow-gold"
+                  >
+                    Salah
+                  </Typography>
+                </Typography>
+              </Link>
+            </Box>
             <Box sx={{ display: { xs: "none", md: "block" } }}>
               <Stack direction={"row"} spacing={3}>
                 <ButtonNav section="" content="Home" />
