@@ -35,6 +35,13 @@
       "Ensured cross-browser compatibility and implemented fully responsive designs for all supported devices.",
       "Converted native applications into mobile-friendly, responsive web interfaces, improving accessibility and user reach."
     ],
-    "languages": ["React.js", "Material UI", "TailwindCSS", "HTML", "CSS", "JavaScript"]
+    "languages": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Material UI",
+      "TailwindCSS"
+    ]
   }
 ]
