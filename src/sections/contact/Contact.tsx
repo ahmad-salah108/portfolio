@@ -8,7 +8,7 @@ function Contact() {
   const { contactRef } = useSectionsObserver();
 
   return (
-    <Box component={'section'} id="contact" className="section my-200" ref={contactRef}>
+    <Box component={'section'} id="contact" className="section" style={{marginTop: '200px', marginBottom: '100px'}} ref={contactRef}>
       <Stack sx={{ width: "100%", gap: "7rem" }}>
         <Typography
           variant="h2"

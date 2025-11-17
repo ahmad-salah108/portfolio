@@ -84,6 +84,25 @@
     ]
   },
   {
+    "title": "Middle East Gas",
+    "subtitle": "Dashboard",
+    "description": "Middle East Gas is a simple dashboard made with vanilla HTML, CSS and JavaScript.",
+    "thumbnail": "/projects/gas/gas1.webp",
+    "github": {
+      "disabled": false,
+      "url": "https://github.com/ahmad-salah108/gas-project"
+    },
+    "live": {
+      "disabled": false,
+      "url": "https://ahmad-salah108.github.io/gas-project/"
+    },
+    "images": [
+      "/projects/gas/gas1.webp",
+      "/projects/gas/gas2.webp",
+      "/projects/gas/gas3.webp"
+    ]
+  },
+  {
     "title": "Eram Games",
     "subtitle": "Landing Page",
     "description": "This is a landing page for a games production company called Eram Games. The website is developed using HTML and TailwindCSS.",
