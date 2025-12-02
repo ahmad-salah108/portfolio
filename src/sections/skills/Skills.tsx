@@ -1,10 +1,9 @@
 "use client"
 
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import React from "react";
 import SkillCard from "./components/SkillCard";
 import type { SkillCardType } from "@/types";
-import data from "./data.json";
+import data from "@/data/skills.json";
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
 
 const skills: SkillCardType[] = data;

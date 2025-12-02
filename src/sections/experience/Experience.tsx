@@ -3,10 +3,10 @@
 import { alpha, Box, Chip, Stack, Typography } from "@mui/material";
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
 import JobCard from "./components/JobCard";
-import experienceData from "./experienceData.json"
 import { JobCardType } from "@/types";
+import data from "@/data/experiences.json"
 
-const data = experienceData as JobCardType[]
+const experiences = data as JobCardType[]
 
 export default function Experience() {
   const { experienceRef } = useSectionsObserver();
@@ -27,7 +27,7 @@ export default function Experience() {
           Experience
         </Typography>
         <Stack sx={{ gap: "2rem", margin: "auto", maxWidth: "850px" }}>
-          {data.map((e, i) => (
+          {experiences.map((e, i) => (
             <JobCard key={i} data={e}/>
           ))}
         </Stack>

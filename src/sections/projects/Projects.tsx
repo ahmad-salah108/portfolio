@@ -3,12 +3,12 @@
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import ProjectCard from "./components/ProjectCard";
-import projectsData from "./projectsData.json"
+import data from "@/data/projects.json"
 import { ProjectDataType } from "@/types";
 
 function Projects() {
   const { projectsRef } = useSectionsObserver();
-  const projects = projectsData as ProjectDataType[];
+  const projects = data as ProjectDataType[];
 
 
   return (

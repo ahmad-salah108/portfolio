@@ -2,7 +2,7 @@ import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import { scrollToSection } from "@/utils";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import { socials } from "@/constants/socials";
+import { socials } from "@/data/socials";
 
 
 export default function HeroDescription() {

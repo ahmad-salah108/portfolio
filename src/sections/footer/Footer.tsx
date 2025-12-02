@@ -1,6 +1,6 @@
 "use client"
 
-import { socials } from "@/constants/socials";
+import { socials } from "@/data/socials";
 import { alpha, IconButton, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 
