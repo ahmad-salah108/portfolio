@@ -1,5 +1,4 @@
 "use client"
-
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import SkillCard from "./components/SkillCard";
 import type { SkillCardType } from "@/types";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import ContactForm from "./components/ContactForm";
 
 function Contact() {

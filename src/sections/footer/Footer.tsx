@@ -19,7 +19,7 @@ function Footer() {
         rowGap: '1rem'
       }}
     >
-      <Typography fontSize={'0.85rem'} color="offWhite">&copy; 2025 Ahmad Salah. All Rights reserved.</Typography>
+      <Typography fontSize={'0.85rem'} color="offWhite">&copy; {new Date().getFullYear()} Ahmad Salah. All Rights reserved.</Typography>
       <Stack component={'address'} direction={"row"} sx={{gap: '0.5rem'}}>
         {socials.map((s) => (
           <Link

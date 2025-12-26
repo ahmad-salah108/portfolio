@@ -1,8 +1,6 @@
 "use client";
-
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
 import { Box, Stack, Typography } from "@mui/material";
-import React from "react";
 import University from "./components/University";
 import School from "./components/School";
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { Box, Grid } from "@mui/material";
-import React from "react";
 import HeroImage from "./components/HeroImage";
 import HeroDescription from "./components/HeroDescription";
 import { useSectionsObserver } from "@/context/SectionsObserverContext";

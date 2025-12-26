@@ -1,16 +1,12 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import CollectionsOutlinedIcon from "@mui/icons-material/CollectionsOutlined";
 import ImageCarousel from "./ImageCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 import type { ProjectDataType } from "@/types.ts";
 import Image from "next/image";
-import { Box } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function CarouselModal({
@@ -36,7 +32,7 @@ export default function CarouselModal({
         maxWidth: "600px",
         margin: "auto",
         borderRadius: "4px",
-        cursor: 'pointer'
+        cursor: 'zoom-in'
       }}
     />
   ));

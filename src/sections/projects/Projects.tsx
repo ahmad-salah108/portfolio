@@ -1,5 +1,4 @@
 "use client";
-
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import ProjectCard from "./components/ProjectCard";

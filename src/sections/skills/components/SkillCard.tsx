@@ -1,7 +1,6 @@
 import { SkillCardType } from "@/types";
 import { Box, Stack } from "@mui/material";
 import Image from "next/image";
-import React from "react";
 
 export default function SkillCard(props: SkillCardType) {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { alpha, Box, Chip, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { useSectionsObserver } from "@/context/SectionsObserverContext";
 import JobCard from "./components/JobCard";
 import { JobCardType } from "@/types";
