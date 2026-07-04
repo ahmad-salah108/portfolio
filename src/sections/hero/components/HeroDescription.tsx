@@ -67,7 +67,7 @@ export default function HeroDescription() {
         <Button variant="contained" onClick={() => scrollToSection("contact")}>
           Contact
         </Button>
-        <Link href={"https://drive.google.com/file/d/1jdpQulv8jQ5gazDbroY5pG9tYmCzS8yg/view?usp=drive_link"} target="_blank" type="application/pdf">
+        <Link href={"/ahmadsalah-resume.pdf"} target="_blank" type="application/pdf">
           <Button variant="outlined">
             Download Resume &nbsp;
             <CloudDownloadIcon sx={{ fontSize: "1.3rem" }} />
