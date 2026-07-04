@@ -1,39 +1,28 @@
 [
   {
-    "date": "2023 — Present",
+    "date": "03/2023 — 9/2023",
     "job": "Front-End Developer",
-    "company": "Freelance",
+    "company": "Makla for IT (Remote)",
     "description": [
-      "Currently developing Fenzo using Next.js & TailwindCSS, an e-commerce website focused on wedding decorations and rentals.",
-      "Delivered multiple client projects using modern web technologies, maintaining top-tier performance, accessibility, and responsiveness across devices."
-    ],
-    "languages": ["React.js", "Next.js", "TailwindCSS", "Material UI"]
-  },
-  {
-    "date": "03/2023 — 11/2023",
-    "job": "Front-End Developer",
-    "company": "Makla for IT Solutions",
-    "description": [
-      "Built a mini ERP system using React.js, based on the Fuse React Template , to ensure a scalable and professional structure. Implemented a role- and permission-based access system (SuperAdmin, Admins, Company Users) and integrated key third-party libraries such as Google Maps, Zod, and others.",
-      "Developed an educational platform for English language learning, designed for both students and teachers to interact and manage learning materials.",
+      "I built the frontend interfaces for an Enterprise Resource Planning (ERP) system, which included several sections: Property Management (containing essential property data such as property name, property number, detailed address, geographic coordinates on a map, property type, etc.), Company Management (company name, company type, commercial registration number, etc.), Employee Management, and Positions and Permissions. I tested all these fields and entered data into them without exception to ensure accuracy and corrected any existing issues.",
       "Collaborated closely with backend developers to integrate well-structured REST APIs and ensure seamless data flow.",
       "Worked with UI/UX designers to implement responsive, user-friendly, and accessible interfaces.",
-      "Wrote clean, optimized, and maintainable code under the guidance of an experienced team leader, following best practices and coding standards.",
+      "Worked with UI/UX designers to implement responsive, user-friendly, and accessible interfaces.",
+      "Wrote clean, optimized, and maintainable code under the supervision of an experienced team leader.",
       "Ensured security best practices and data protection across the application stack."
     ],
     "languages": ["React.js", "Material UI", "TailwindCSS"]
   },
   {
-    "date": "07/2022 — 02/2023",
-    "job": "Front-End Developer",
-    "company": "Domino ICT",
+    "date": "02/2021 — 02/2023",
+    "job": "Front-End Developer & Data Entry",
+    "company": "Domino ICT (On Site)",
     "description": [
-      "Built Vela, a private chat application for companies using React.js and MUI, featuring to-do lists, event management, and video/voice calling.",
-      "Developed an interactive dashboard for a gas station using HTML, CSS, and JavaScript, improving data visibility and operational efficiency.",
-      "Enhanced and maintained features across multiple platforms using React.js, HTML, CSS, and JavaScript.",
-      "Designed and optimized layouts to improve usability, performance, and user experience.",
-      "Ensured cross-browser compatibility and implemented fully responsive designs for all supported devices.",
-      "Converted native applications into mobile-friendly, responsive web interfaces, improving accessibility and user reach."
+      "I completed a three-month internship and was then hired as a Frontend Web Developer for another three months. I worked on developing website to manage gas cylinders in the company's warehouses. I also developed a chat application called Vela, similar to WhatsApp, using React.js. During this time, my manager began relying on me to organize and archive data in MS Excel, CRM, CMS, and GitHub, while continuously backing it up to a secure cloud. This included:",
+      "Actual raw data collected directly from clients and integrated into their websites and applications that we developed.",
+      "Archiving all company projects and advertising campaigns in Excel files and folders, organized systematically and logically based on a branching structure.",
+      "Installing articles and media on news websites through the site's control panel (CMS).",
+      "Entering data for current and potential clients into the Customer Relationship Management (CRM) system, such as project start date, client contact person, phone numbers, email addresses, etc."
     ],
     "languages": [
       "HTML",
@@ -41,7 +30,10 @@
       "JavaScript",
       "React.js",
       "Material UI",
-      "TailwindCSS"
+      "TailwindCSS",
+      "MS Excel",
+      "MS Word",
+      "CMS"
     ]
   }
 ]
